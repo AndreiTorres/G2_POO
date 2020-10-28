@@ -1,2 +1,14 @@
 # G2_POO
-Proyecto del equipo 2 POO UADY 2020
+# Programación Orientada a Objetos
+
+Repositorio del equipo 2 POO UADY 2020
+
+Profesor: Dr. Edgar Antonio Cambranes Martínez
+
+# Integrantes
+* Jesùs Andrei Torres Landero
+* Jose Angel Ruiz Escalante
+* Daniel Salvador Amaya Tapia
+* Farid Antonio Pacheco Pérez
+
+# Proyecto
