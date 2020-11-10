@@ -1,0 +1,80 @@
+---BITACORA--- GRUPO 2 POO
+
+24/10/2020
+
+Nos reunimos los 4 integrantes, a discutir cual seria el proyecto a realizar, ya que teniamos
+en mente otro, pero no nos convenció. Se decidió hacer un proyecto que ayudara a los nuevos estudiantes
+a guiarse y a ubicar los distintos edificios que hay en la facultad. La idea empezó asi, pero 
+con la lluvia de ideas decidimos que fuera un proyecto no solo para los nuevos, sino que ayude
+a los usuarios de la facultad ya que aunque llevemos algun tiempo estudiando en la facultad no siempre
+se recuerda la ubicacion de los cubiculos de los profesores, o algun edificio en particular. Ademas se platicó
+la opcion de utilizar google maps y algunas de las api que google ofrece.
+Decidimos platicarle la idea al profesor para ver que opinaba. 
+
+Avances: Se definió la idea del proyecto en el que queremos trabajar, ya que teniamos muchas dudas.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+
+02/11/2020
+
+Nos reunimos los 4 integrantes con el profesor a platicarle la idea que teniamos sobre el proyecto, la conversacion fue breve pero al profesor
+le parecio una idea buena. Le comentamos la idea de usar google maps, y nos dejo de tarea investigar que ventajas y desventajas ofrece
+el uso de google maps, ademas, pensar en las dificultades que habia en trabajar con una imagen plana, asi que nos dio 
+algunas opciones de lo que podiamos hacer.
+
+Cuando terminó la reunion el equipo se quedo en la llamada a discutir sobre el uso de google maps y las opciones que nos ofrecia para el proyecto.
+Despues de un rato investigando nos dimos cuenta que google cobra por el uso de sus api's, por lo que decidimos buscar una alternativa que nos ofreciera
+mas facilidades, fue asi que encontramos OpenStreetMap.
+
+OpenStreetMap es un proyecto colaborativo para crear mapas editables y libres, sus diferentes api's
+nos dan la facilidad de recortar la región del mapa con la que queremos trabajar y usarla en nuestro proyecto.
+Investigando mas, nos dimos cuenta que se podia mapear la facultad, sus edifios, caminos, estacionamientos, etc...
+
+Se empezó el mapeo y pedimos una reunión con el maestro para darle a conocer la alternativa que habiamos buscado.
+
+Avances: Se confirmó la idea del proyecto y empezamos a trabajar sobre las expectativas de la aplicación, 
+se investigó sobre OpenStreetMap y se empezo el mapeo de la facultad.
+
+Asistentes:
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+ 
+
+05/11/2020
+
+Nos reunimos con el profesor, le platicamos la alternativa para el proyecto y nos comentó
+que le parecia una buena idea. Nos pidió empezar a reunir los requerimientos del proyecto.
+
+Avances: Empezamos a trabajar sobre los requerimientos.
+Asistente:
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+
+Farid no acudió por motivos personales, avisó con anterioridad.
+
+09/11/2020
+
+Primera entrega de la version inicial de requerimientos debe ser entregada el dia 14/11/2020.
+
+Reunión de los 4 integrantes del grupo, todos asistieron, discutimos los ultimos detalles
+de los requerimientos funcionales y no funcionales del proyecto. Asi como discutir cuales son nuestras
+expectativas reales sobre el trabajo. Definimos bien nuestros objetivos y empezamos a diseñar la interfaz de la aplicación
+para tener una idea mas clara de lo que queremos.
+
+- Jose Angel y Daniel diseñaron un boceto de como se veria la aplicacion de acuerdo a las especificaciones.
+- Andrei realizó la bitacora, y los documentos de acuerdo a las ideas que todos aportaban.
+- Farid mapeo las rutas y los edificios de la facultad de matematicas usando el proyecto Open
+Street Map.
+
+Asistentes:
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
