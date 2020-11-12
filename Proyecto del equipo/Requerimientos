@@ -1,1 +1,32 @@
+Requerimientos Funcionales:
+
+La aplicación muestra el mapa de la facultad de matemáticas; Le entrega a los usuarios la ubicación de los distintos puntos de la facultad, como pueden ser edificios,
+baños, cafetería, salones, entre otros. La ubicación será marcada en el mapa, se ha decidido no agregar una ruta ya que el mapa muestra los distintos
+caminos que hay en la facultad, por lo que la ruta tomada es decisión total del usuario. Además, el usuario tiene a disposición una barra de navegación donde 
+podrá escribir el identificador del punto que desea buscar, o escribir directamente la categoría, por ejemplo, “baños” y muestra todos los baños de la facultad.
+El usuario puede acceder a un ícono de menú, el cual despliega las opciones “eventos” y “directorio”.
+Los eventos son calendarizados únicamente por un administrador. Estos eventos los puede ver el usuario, así como una breve descripción, ubicación y horario.
+El directorio muestra al usuario una lista de toda la información relacionada a los trabajadores de la facultad.
+
+Lista de requerimientos:
+
+Visualizar una lista con información de cada maestro, en el cual se podrá encontrar el cubículo y su ubicación en la cual se verá reflejado en el mapa.
+Lista de eventos.
+Diseño del croquis de FMAT
+Barra de búsqueda:
+                              - Nombre del maestro
+                              - Lugar 
+                              - Autocompletado de nombres
+      - Base de datos con información de los maestros
+      - Tipo de búsqueda: Ingresar en una barra de búsqueda la información que se desea encontrar
+
+Opciones de lenguaje: Java, JavaScript, Kotlin.
+
+
+No funcionales:
+
+La página tendrá una base de datos con la diferente información del personal administrativo.
+Solo se podrá acceder por medio de una conexión a internet, por lo que cualquier persona con una red disponible puede entrar.
+La información dentro será modificada por un administrador, mientras que todos los que no lo sean solo podrán ver los diferentes apartados.
+Las ubicaciones y eventos solo podrán ser visualizados si previamente han sido agregados apropiadamente con los datos requeridos como horario y locación. 
 
