@@ -13,5 +13,3 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 
 # Proyecto
 
-
-<em>Probando</em>
