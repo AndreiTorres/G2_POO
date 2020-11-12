@@ -14,4 +14,5 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 # Proyecto
 
 # Indice
-[2. Objetivos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Objetivo)
+[1. Objetivos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Objetivo)
+[2. Requerimiento] (https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Requerimientos)
