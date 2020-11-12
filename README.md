@@ -13,4 +13,5 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 
 # Proyecto
 
- 1.- <a href="https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Bitacora.txt">Bitácora</a> 
+# Indice
+[2. Objetivos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Objetivo)
