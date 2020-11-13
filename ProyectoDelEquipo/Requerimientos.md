@@ -1,4 +1,5 @@
 # Requerimientos Funcionales:
+ #### [Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width) para mayor información
 
 La aplicación permite al usuario visualizar información del personal de la facultad. Esta información puede ser agregada, modificada y eliminada  únicamente por los administradores. Los usuarios pueden visualizar el croquis de la facultad, sin embargo no será posible su modificación.
 
