@@ -1,12 +1,12 @@
 # CASOS DE USO
 
 
-###Caso-01:
-    #####Buscar Cubículo
-###Descripción:
-    #####El usuario podrá buscar los cubículos de los profesores mediante opciones desplegadas por un menú de hamburguesa
+##Caso-01:
+    ####Buscar Cubículo
+##Descripción:
+    ####El usuario podrá buscar los cubículos de los profesores mediante opciones desplegadas por un menú de hamburguesa
 
-###Pasos: 
+##Pasos: 
     1.  El usuario accede al menú mediante el botón de hamburguesa
     2.  El usuario selecciona “Cubículos” entre varias opciones.
     3.  El usuario ve desplegado un listado de cubículos, debajo de un mapa fixed a media pantalla
