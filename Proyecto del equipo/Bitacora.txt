@@ -70,3 +70,24 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
+
+
+12/11/2020
+
+Primera revisión general y formato de trabajo
+
+Reunion del equipo para corrección de la lista de requerimientos funcionales, no funcionales, casos de uso, diagrama de casos de uso.
+Debe ser entregada el día 14/11/2020.
+
+Avances: La lista de requerimientos está casi lista, solo falta la aprobación final del profesor.
+
+
+- Daniel realizó la bitacora
+- Todos estuvimos reparando el archivo, especificamente las secciones de requerimientos, diagrama de casa de uso, la agenda
+- Correción en general
+
+Asistentes:
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
