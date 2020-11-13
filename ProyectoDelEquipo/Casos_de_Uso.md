@@ -11,6 +11,7 @@
    4. El usuario selecciona el cubículo deseado
    5. El usuario ve desplegada la información del cubículo y puede hacer click al botón “ubicarlo” para    que se despliegue en el mapa un pin de la ubicación de este
 
+- - -
 
 ### Caso-02: *Buscar Edificio*
 ### Descripción: *El usuario podrá buscar los edificios y la información de cada uno mediante opciones desplegadas por un menú de hamburguesa*
@@ -22,6 +23,7 @@
    4. El usuario selecciona el edificio deseado
    5. El usuario ve desplegada la información del edificio y un pin de la ubicación de este
 
+- - -
 
 ### Caso-03: *Buscar Maestro* 
 ### Descripción: *El usuario podrá buscar la información de contacto de los profesores mediante opciones desplegadas por un menú de hamburguesa*
@@ -33,6 +35,7 @@
    4.  El usuario selecciona el Maestro deseado
    5.  El usuario ve desplegada la información de contacto del maestro y puede hacer click al botón “ubicarlo” para que se despliegue en el mapa un pin de la ubicación de este         y también puede mandarle un correo desde la tarjeta de contacto
 
+- - -
 
 ### Caso-04: *Buscar eventos*
 ### Descripción: *El usuario podrá buscar los eventos que están programados en la   facultad.*
@@ -43,6 +46,7 @@
    3.  El usuario selecciona la opción “eventos”.
    4.  El usuario selecciona el evento.
 
+- - -
 
 ### Caso-05: *Búsqueda mediante barra*
 ### Descripción: *El usuario podrá hacer uso de una barra de búsqueda, con la que podrá identificar los edificios, cubículos o maestros, con el nombre del caracter a buscar.*
@@ -52,6 +56,8 @@
    2.  El usuario ve desplegada y centrada la barra de búsqueda y un teclado, mediante el cual ingresará el nombre (Edificios, cubículos, Maestro) a encontrar,
    3.  El usuario selecciona lo opción completa
    4.  El usuario es dirigido a la sección correspondiente según su elección
+
+- - -
 
 ### Caso-01-ADMIN: *Gestión sobre la información de eventos, maestros, cubículos, edificios*
 ### Descripción: *El administrador podrá modificar y eliminar información del personal, eventos, e información con respecto a FMAT.*
@@ -63,6 +69,7 @@
        a.  Si selecciona todas las opciones y le da a borrar, le pedirá confirmar, con una contraseña, una vez confirmada la cuenta le dará al botón guardar.
    4.  Se desplegarán los campos de las opciones escogidas, el admin cambiará esta información (se podrá eliminar) y le dará click a la opción guardar.
 
+- - -
 
 ### Caso-02-ADMIN: *Gestión añadir evento, maestro, cubículo, edificio*
 ### Descripción: *El administrador podrá añadir desde eventos, maestros, cubículos y edificios*
@@ -72,7 +79,7 @@
    2.  Escogemos el tipo de sección a agregar, los campos cambiarán
    3.  Añadir los campos, y le damos a guardar
 
-
+- - -
 
 # DIAGRAMA DE CASOS DE USO.
 
