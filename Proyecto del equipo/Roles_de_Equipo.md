@@ -7,7 +7,8 @@
 
 # Herramientas
 
-Trello: Este mecanismo de ToDo List, nos organiza el backlog, pudiendo ver la magnitud del proyecto. De igual forma podemos seleccionar una tarjeta específica y centrarnos en trabajar con ello; con Trello podemos asignar tareas a personas específicas y podemos ver el avance de esta en tiempo real, pudiendo notificar el rezago de alguien, como también medir la participación y desempeño de cada integrante.
+Trello: 
+Este mecanismo de ToDo List, nos organiza el backlog, pudiendo ver la magnitud del proyecto. De igual forma podemos seleccionar una tarjeta específica y centrarnos en trabajar con ello; con Trello podemos asignar tareas a personas específicas y podemos ver el avance de esta en tiempo real, pudiendo notificar el rezago de alguien, como también medir la participación y desempeño de cada integrante.
 
 https://trello.com/ 
 
