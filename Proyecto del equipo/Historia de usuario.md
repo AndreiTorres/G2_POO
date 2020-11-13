@@ -1,4 +1,4 @@
-Historias de usuario:
+#Historias de usuario:
 
 Como usuario puedo ver un botón de hamburguesa (izquierda superior)  y el mapa de FMAT centrado
 Como usuario puedo ver un navbar en la zona izquierda superior que despliega opciones ( Edificios, Salones, Cubículos, Maestros, Puntos, Eventos, entre otros ) para navegar.
