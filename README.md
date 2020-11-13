@@ -12,10 +12,10 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 * Farid Antonio Pacheco Pérez
 
 # Proyecto
-## [ Bitácora](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Bitacora.txt)
+## [ Bitácora](ProyectoDelEquipo/Bitacora.txt)
 ## Indice
-* 1.[ Objetivos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Objetivos.md)
-* 2.[ Requerimientos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Requerimientos.md)
-* 3.[ Historias de usuario](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Historia%20de%20usuario.md)
-* 4.[ Casos de uso](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Casos%20de%20uso.md)
-* 5.[ Herramientas y roles de equipo](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Roles_de_Equipo.md)
+* 1.[ Objetivos](ProyectoDelEquipo/Objetivos.md)
+* 2.[ Requerimientos](ProyectoDelEquipo/Requerimientos.md)
+* 3.[ Historias de usuario](ProyectoDelEquipo/Historia_de_Usuario.md)
+* 4.[ Casos de uso](ProyectoDelEquipo/Casos_de_Uso.md)
+* 5.[ Herramientas y roles de equipo](ProyectoDelEquipo/Roles_de_Equipo.md)
