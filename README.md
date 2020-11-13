@@ -17,4 +17,4 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 * 1.[ Objetivos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Objetivos.md)
 * 2.[ Requerimientos](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Requerimientos.md)
 * 3.[ Historias de usuario](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Historia%20de%20usuario.md)
-* 4.[ Casos de uso](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Casos%20de%20uso)
+* 4.[ Casos de uso](https://github.com/AndreiTorres/G2_POO/blob/main/Proyecto%20del%20equipo/Casos%20de%20uso.md)
