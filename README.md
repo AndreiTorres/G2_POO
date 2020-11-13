@@ -19,3 +19,4 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 * 3.[ Historias de usuario](ProyectoDelEquipo/Historia_de_Usuario.md)
 * 4.[ Casos de uso](ProyectoDelEquipo/Casos_de_Uso.md)
 * 5.[ Herramientas y roles de equipo](ProyectoDelEquipo/Roles_de_Equipo.md)
+* 6.[Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)
