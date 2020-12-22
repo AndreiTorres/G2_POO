@@ -1,4 +1,5 @@
----BITACORA--- GRUPO 2 POO
+======= BITACORA =======
+------ GRUPO 2 POO -----
 
 24/10/2020
 
@@ -11,6 +12,7 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
+****************************************************************************************************
 
 02/11/2020
 
@@ -33,7 +35,7 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
- 
+****************************************************************************************************
 
 05/11/2020
 
@@ -49,6 +51,7 @@ Asistente:
 - Daniel Salvador Amaya Tapia
 
 Farid no acudió por motivos personales, avisó con anterioridad.
+****************************************************************************************************
 
 09/11/2020
 
@@ -70,7 +73,7 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
-
+****************************************************************************************************
 
 12/11/2020
 
@@ -91,3 +94,19 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
+****************************************************************************************************
+
+21/12/2020
+
+Actualización de los documentos, Leaflet Quick Start Guide
+
+Avances: Se inició la applicación web, se crearon archivos base y se creo la estructura de la página.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
+
+#
