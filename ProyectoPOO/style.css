@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+/*============BASE============*/
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+/*============NAVBAR============*/
+
+.container-nav{
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 7%;
+    background-color: #676767;
+    z-index: 10;
+}
+
+.dropdown-menu .icon-bar-button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0.7% 0;
+    left: 2%;
+    border: 0.1px solid white;
+    cursor: pointer;
+}
+
+.dropdown-menu .icon-bar{
+    margin: 10% 0;
+    width: 60%;
+    height: 2px;
+    background-color: #AE8240;
+}
+
+
+.menu-link--selected{
+    color
+}
