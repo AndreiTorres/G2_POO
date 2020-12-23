@@ -109,4 +109,15 @@ Asistentes:
 - Farid Pacheco Perez
 ****************************************************************************************************
 
-#
+22/12/2020
+
+Actualización de los documentos, HTML, CSS y base de datos. 
+
+Avances: Se dividió el trabajo, por una parte se avanzón en los documentos de HTML y CSS , por otra parte se empezaron la investigacion y las pruebas de la base de datos.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
