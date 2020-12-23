@@ -77,7 +77,21 @@ body{
     background-color: aquamarine;
 }
 
+/*============SECTIONS============*/
 
+.sections{
+    background-color: #AE8240;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subTitle {
+    text-align: center;
+}
+
+
+/*====================================*/
 @media screen and (min-width: 480px){
     body {
         background-color: black;
