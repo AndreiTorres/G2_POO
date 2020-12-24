@@ -121,3 +121,16 @@ Asistentes:
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+23/12/2020
+
+DB y Leafleat
+
+Avances: Se usará IndexedDB con la librería Dexie. Se hicieron diferentes pruebas en el uso del mapa y cómo adecuarlo a nuestros requerimientos usando JS. 
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
