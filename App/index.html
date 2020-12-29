@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
+  <meta http-equiv="Content-Type" content="text/html, charset=utf-8">
   <title>Mapa simple de OpenStreetMap con Leaflet!!</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -12,29 +13,36 @@
 
 <body>
   <nav class="container container-nav">
-      <span class="icon-bar-button">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </span>
-      <ul class="dropdown-menu">
+    <span class="centerTXT">FMAT</span>
+    <span class="icon-bar-button" id="btnMenu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </span>
+    <div class="barNavBar"></div>
+      <ul class="dropdown-menu" id="navMenu">
         <li class="menu-item"><a href="#" class="menu-link">Edificios</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Salones</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Profesores</a></li>
         <li class="menu-item"><a href="#" class="menu-link">X</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Enlinea2</a></li>
       </ul>
-
-      <span class="centerTXT">FMAT</span>
   </nav>
 
-  <main>
-    <section class="map">
-      <h1>Mapa simple de OpenStreetMap con Leaflet</h1>  
-      <div id="map" class="map map-home" style="margin:20px 0 20px 0;height:400px;"></div>
+  <main class="container-information">
+    <section class="mapa">
+      <div id="map" class="map map-home"></div>
     </section>
 
-    <section class="sections">
+    <section class="information">
+      <span class="asunto">
+        <p>ASUNTO</p>
+      </span>
+    </section>
+
+
+<!--
+<section class="sections">
       <div class="events">
         <h3 class="subTitle">Eventos</h3>
         <ul>
@@ -71,6 +79,9 @@
           <li>Lorem, ipsum dolor.</li>
         </ul>
     </section>
+
+-->
+    
   </main>
 
 
@@ -78,6 +89,7 @@
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    crossorigin=""></script>
   <script src="script/index.js"></script>
+  <script src="script/crud.js"></script>
 </body>
 
 </html>
