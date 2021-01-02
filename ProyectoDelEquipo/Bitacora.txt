@@ -134,3 +134,28 @@ Asistentes:
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+29/12/2020
+
+Figma , javascript
+
+Avances: Se creo el diagrama de clases y tambien se empezaron a implementar en js.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+****************************************************************************************************
+
+30/12/2020
+
+Heroku
+
+Avances: Se empezó a aprender el uso de Heroku.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
