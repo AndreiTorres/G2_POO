@@ -137,7 +137,7 @@ Asistentes:
 
 29/12/2020
 
-Figma , javascript
+Figma y javascript
 
 Avances: Se creo el diagrama de clases y tambien se empezaron a implementar en js.
 
