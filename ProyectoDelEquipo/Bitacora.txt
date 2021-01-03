@@ -159,3 +159,15 @@ Asistentes:
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+02/01/2021
+
+Ludichart
+
+Avances: Se actualizó y optimizo el diagrama de clases. Se empezó el diagrama de paquetes.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Farid Pacheco Perez
+****************************************************************************************************
