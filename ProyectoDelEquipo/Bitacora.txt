@@ -171,3 +171,14 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+Flujos alternos
+
+Avances: Se añadieron los flujos alternos de los casos de uso.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
