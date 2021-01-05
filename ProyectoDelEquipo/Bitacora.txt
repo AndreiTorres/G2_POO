@@ -149,9 +149,9 @@ Asistentes:
 
 30/12/2020
 
-Heroku
+Documentos
 
-Avances: Se empezó a aprender el uso de Heroku.
+Avances: Se hicieron cambios en los documentos.
 
 Asistentes: 
 - Jose Angel Ruiz Escalante
