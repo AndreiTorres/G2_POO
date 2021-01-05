@@ -67,12 +67,12 @@
 ### Descripción: El administrador podrá modificar información del personal, eventos, e información con respecto a FMAT.
 
 Pasos:
-  1.El administrador podrá acceder a cualquier sección como un usuario normal
-  2.El administrador podrá presionar los botones tuerca, de configuración que estarán en todos los listados de opciones, (sección donde se muestran todos los eventos, los maestros, los cubículos, o los edificios)
-  3.Se desplegará un espacio donde se podrá seleccionar la información a modificar (podrá escoger múltiples opciones)
-  4.Se desplegarán los campos de las opciones escogidas, el administrador cambiará esta información y le dará click a la opción guardar.
-  5.El sistema pedirá confirmación del proceso mediante credenciales del administrador
-  6.El administrador escribirá sus credenciales y presionará aceptar.
+  1. El administrador podrá acceder a cualquier sección como un usuario normal
+  2. El administrador podrá presionar los botones tuerca, de configuración que estarán en todos los listados de opciones, (sección donde se muestran todos los eventos, los maestros, los cubículos, o los edificios)
+  3. Se desplegará un espacio donde se podrá seleccionar la información a modificar (podrá escoger múltiples opciones)
+  4. Se desplegarán los campos de las opciones escogidas, el administrador cambiará esta información y le dará click a la opción guardar.
+  5. El sistema pedirá confirmación del proceso mediante credenciales del administrador
+  6. El administrador escribirá sus credenciales y presionará aceptar.
 
 	
 ### Flujo Alterno: 
