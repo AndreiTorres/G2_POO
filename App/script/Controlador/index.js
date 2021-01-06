@@ -1,6 +1,7 @@
-/**######################## CONTOLADOR ###################### **/
+/**######################## CONTROLADOR ###################### **/
 /*============NAVBAR============*/
-menu = document.getElementById("navMenu");
+
+var menu = document.getElementById("navMenu");
 
 //Click fuera de navBar button -------------------------------------------------
 window.onclick = function(event) {
@@ -19,10 +20,12 @@ document.getElementById("btnMenu")
 });
 
 //BOTONES NAVBAR ---------------------------------------------------------------
+var sectionInformacion = document.getElementById("informacion");
 //EDIFICIOS ___________________________________
 document.getElementById("EdificiosBtn")
 	.addEventListener("click", function(){
-		window.alert("EDIFICIOS FUNCION");
+		sectionInformacion.innerHTML
+		alert("EDIFICIOS FUNCION");
 	})
 //SALONES ___________________________________
 document.getElementById("SalonesBtn")
@@ -41,10 +44,25 @@ document.getElementById("EnlineaBtn")
 	})
 
 /*============MAPA============*/
-
 var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
-	var map = L.map('map').setView([21.04817, -89.64448], 18).addLayer(osm);
-	L.marker([21.04817, -89.64448])
-		.addTo(map).bindPopup('FMAT').openPopup();
+        osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
+
+
+var southEast = L.latLng(21.04986,-89.64667);
+var northWest = L.latLng(21.04718,-89.64226);
+var bounds = L.latLngBounds(southEast, northWest);
+
+var map = L.map('map',{maxBounds: bounds, maxZoom: 19, minZoom: 18}).setView([21.04817, -89.64448], 18).addLayer(osm);
+
+
+var ubicacion1 = new Ubicacion("Cafeteria", 1,21.04986,-89.64667);
+console.log("hola")
+
+
+
+//var map = L.map('map').setView([21.04817, -89.64448], 18).addLayer(osm);
+//	L.marker([21.04817, -89.64448]).addTo(map).bindPopup('FMAT').openPopup();
+
+
+

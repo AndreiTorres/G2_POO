@@ -21,7 +21,7 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 7vh;
-    background-color: #676767;
+    background-color: rgb(103, 103, 103);
     z-index: 10;
 }
 
