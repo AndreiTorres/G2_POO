@@ -17,9 +17,9 @@ evento = { nombre:"PIB cheeto", lugar:{ x:100, y:50}, descripcion: "Hola wangos"
 console.log(evento);
 
 class Evento {
-    constructor(nombre, lugar{}, descricion, hora, responsable){
+    constructor(nombre, lugar, descricion, hora, responsable){
         this.nombre = nombre;
-        this.lugar = lugar{};
+        this.lugar{} = lugar;
         this.descricion = descricion;
         this.hora = hora;
         this.responsable = responsable;

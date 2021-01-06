@@ -1,7 +1,8 @@
-
+/**######################## CONTOLADOR ###################### **/
 /*============NAVBAR============*/
 menu = document.getElementById("navMenu");
-//Click fuera de navBar button
+
+//Click fuera de navBar button -------------------------------------------------
 window.onclick = function(event) {
 	if (!(event.target.matches('.icon-bar-button')
 	|| event.target.matches('.icon-bar'))
@@ -11,12 +12,33 @@ window.onclick = function(event) {
 		console.log(menu.className);
 	}
 }
-
-//Toggle navBar
+//Toggle navBar -----------------------------------------------------------------
 document.getElementById("btnMenu")
-  .addEventListener("click", function(){
-	menu.classList.toggle("showMenu");
+	.addEventListener("click", function(){
+		menu.classList.toggle("showMenu");
 });
+
+//BOTONES NAVBAR ---------------------------------------------------------------
+//EDIFICIOS ___________________________________
+document.getElementById("EdificiosBtn")
+	.addEventListener("click", function(){
+		window.alert("EDIFICIOS FUNCION");
+	})
+//SALONES ___________________________________
+document.getElementById("SalonesBtn")
+	.addEventListener("click", function(){
+		alert("SALONES FUNCION");
+	})
+//PROFESORES ___________________________________
+document.getElementById("ProfesoresBtn")
+	.addEventListener("click", function(){
+		alert("PROFESORES FUNCION");
+	})
+//ENLINEA ___________________________________
+document.getElementById("EnlineaBtn")
+	.addEventListener("click", function(){
+		alert("ENLINEA2 FUNCION");
+	})
 
 /*============MAPA============*/
 
