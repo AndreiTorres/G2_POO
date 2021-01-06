@@ -134,3 +134,51 @@ Asistentes:
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+29/12/2020
+
+Figma y javascript
+
+Avances: Se creo el diagrama de clases y tambien se empezaron a implementar en js.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+****************************************************************************************************
+
+30/12/2020
+
+Documentos
+
+Avances: Se hicieron cambios en los documentos.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
+
+02/01/2021
+
+Ludichart
+
+Avances: Se actualizó y optimizo el diagrama de clases. Se empezó el diagrama de paquetes.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Farid Pacheco Perez
+****************************************************************************************************
+
+Flujos alternos
+
+Avances: Se añadieron los flujos alternos de los casos de uso.
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
+****************************************************************************************************
