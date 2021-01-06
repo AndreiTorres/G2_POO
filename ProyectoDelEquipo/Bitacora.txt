@@ -182,3 +182,13 @@ Asistentes:
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
 ****************************************************************************************************
+
+1/5/2021
+
+Avances: Se modificó el código para seguir el modelo "MVC"
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
+- Farid Pacheco Perez
