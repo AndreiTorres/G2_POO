@@ -1,6 +1,7 @@
 /**######################## CONTROLADOR ###################### **/
 /*============NAVBAR============*/
 
+
 var menu = document.getElementById("navMenu");
 
 //Click fuera de navBar button -------------------------------------------------
