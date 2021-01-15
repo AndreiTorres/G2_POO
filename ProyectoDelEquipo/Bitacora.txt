@@ -192,3 +192,13 @@ Asistentes:
 - Jesús Andrei Torres Landero
 - Daniel Salvador Amaya Tapia
 - Farid Pacheco Perez
+****************************************************************************************************
+
+1/14/2021
+
+Avances: Se genero la documentacion de javascript
+
+Asistentes: 
+- Jose Angel Ruiz Escalante
+- Jesús Andrei Torres Landero
+- Daniel Salvador Amaya Tapia
