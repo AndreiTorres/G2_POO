@@ -1,3 +1,5 @@
+export default Horario;
+
 class Horario {
 
     constructor(hora, minutos) {
@@ -14,5 +16,3 @@ class Horario {
         return this.hora + " : " + this.minutos;
     }
 }
-
-export default Horario;

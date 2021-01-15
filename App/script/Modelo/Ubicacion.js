@@ -1,3 +1,5 @@
+exports = {Evento};
+
 class Ubicacion {
 
     constructor( nombre, nivel, x, y){
@@ -37,5 +39,3 @@ class Ubicacion {
     }
     
 }
-
-exports = {Evento};

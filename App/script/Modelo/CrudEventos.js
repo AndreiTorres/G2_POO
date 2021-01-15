@@ -1,3 +1,5 @@
+export default CrudEventos;
+
 class CrudEventos{
     constructor(eventos = []){
         this.eventos = eventos;
@@ -16,5 +18,3 @@ class CrudEventos{
     }
 
 }
-
-export default CrudEventos;

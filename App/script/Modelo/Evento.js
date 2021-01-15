@@ -1,3 +1,5 @@
+export default Evento;
+
 class Evento {
     constructor(nombreEvento, ubicacion, descricionEvento, hora, responsable){
         this.nombreEvento = nombreEvento;
@@ -19,5 +21,3 @@ class Evento {
     getHora(){ return this.hora }
     getResponsable(){ return this.responsable }
 }
-
-export default Evento;

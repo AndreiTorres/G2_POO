@@ -1,3 +1,5 @@
+export default Maestro;
+
 class Maestro{
     constructor(nombre, horario){
         this.nombre = nombre;
@@ -21,5 +23,3 @@ class Maestro{
     }
 
 }
-
-export default Maestro;

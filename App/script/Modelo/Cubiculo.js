@@ -1,3 +1,5 @@
+export default Cubiculo;
+
 class Cubiculo extends Ubicacion{
     constructor (nombre, nivel, cooX, cooY, maestros = []){
         super(nombre, nivel, cooX, cooY);
@@ -12,5 +14,3 @@ class Cubiculo extends Ubicacion{
         return this.maestros;
     }
 }
-
-export default Cubiculo;
