@@ -172,6 +172,8 @@ Asistentes:
 - Farid Pacheco Perez
 ****************************************************************************************************
 
+03/01/2021
+
 Flujos alternos
 
 Avances: Se añadieron los flujos alternos de los casos de uso.
@@ -183,7 +185,7 @@ Asistentes:
 - Farid Pacheco Perez
 ****************************************************************************************************
 
-1/5/2021
+5/01/2021
 
 Avances: Se modificó el código para seguir el modelo "MVC"
 
@@ -194,7 +196,7 @@ Asistentes:
 - Farid Pacheco Perez
 ****************************************************************************************************
 
-1/14/2021
+14/01/2021
 
 Avances: Se genero la documentacion de javascript
 
