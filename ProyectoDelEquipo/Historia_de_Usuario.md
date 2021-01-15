@@ -27,3 +27,7 @@
 
 * Como usuario puedo ver la navbar fixed hacia la izquierda en modo escritorio
 
+
+|[<-- 2. Requerimientos](Requerimientos.md)|[4. Casos de uso -->](Casos_de_Uso.md)|
+|---|---|
+

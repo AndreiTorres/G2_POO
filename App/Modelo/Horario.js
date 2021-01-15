@@ -1,3 +1,5 @@
+export default Horario;
+
 class Horario {
 
     /**
@@ -33,5 +35,3 @@ class Horario {
         return this.hora + " : " + this.minutos;
     }
 }
-
-export default Horario;

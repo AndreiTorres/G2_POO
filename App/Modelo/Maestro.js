@@ -1,3 +1,5 @@
+export default Maestro;
+
 class Maestro{
 
     /**
@@ -53,5 +55,3 @@ class Maestro{
     }
 
 }
-
-export default Maestro;

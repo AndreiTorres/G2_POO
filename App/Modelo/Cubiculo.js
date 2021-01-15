@@ -1,3 +1,5 @@
+export default Cubiculo;
+
 class Cubiculo extends Ubicacion{
 
     /**
@@ -34,5 +36,3 @@ class Cubiculo extends Ubicacion{
         return this.maestros;
     }
 }
-
-export default Cubiculo;

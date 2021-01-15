@@ -24,3 +24,6 @@ La aplicación permite al usuario visualizar información del personal de la fac
 *    La información dentro será modificada por un administrador, mientras que todos los que no lo sean solo podrán ver los diferentes apartados.
 *    Las ubicaciones y eventos solo podrán ser visualizados si previamente han sido agregados apropiadamente con los datos requeridos como horario y locación. 
 
+
+|[<-- 1. Objetivos](Objetivos.md)|[3. Historias de usuario -->](Historia_de_Usuario.md)|
+|---|---|

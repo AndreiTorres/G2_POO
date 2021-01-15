@@ -1,3 +1,5 @@
+export default Evento;
+
 class Evento {
 
     /**
@@ -89,5 +91,3 @@ class Evento {
      */
     getResponsable(){ return this.responsable }
 }
-
-export default Evento;

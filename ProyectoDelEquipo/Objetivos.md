@@ -19,3 +19,7 @@ disposición y así lograr una busqueda mas rapida de los espacios.
 *         Administrador: Pueden modificar el contenido dentro de la aplicación. 
 
 *         Público general: Solo pueden ver y usar las herramientas de la aplicación.
+
+
+|[<-- 6. Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|[2. Requerimientos -->](Requerimientos.md)|
+|---|---|

@@ -112,3 +112,8 @@ Pasos:
 
 # DIAGRAMA DE CASOS DE USO.
 
+![img](img/diagramaCasosUso.png)
+
+
+|[<-- 3. Historias de usuario](Historia_de_Usuario.md)|[5. Herramientas y roles de equipo -->](Roles_de_Equipo.md)|
+|---|---|

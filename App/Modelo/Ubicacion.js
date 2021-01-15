@@ -1,3 +1,5 @@
+exports = {Evento};
+
 class Ubicacion {
 
     /**
@@ -98,5 +100,3 @@ class Ubicacion {
     }
     
 }
-
-exports = {Evento};

@@ -1,3 +1,5 @@
+export default CrudEventos;
+
 class CrudEventos{
 
     /**
@@ -38,8 +40,5 @@ class CrudEventos{
     modificarEvento(evento){
         this.eventos.sort(evento)
     }
-
 }
 
-
-export default CrudEventos;

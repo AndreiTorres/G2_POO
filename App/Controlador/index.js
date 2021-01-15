@@ -26,7 +26,17 @@ var sectionInformacion = document.getElementById("informacion");
 //EDIFICIOS ___________________________________
 document.getElementById("EdificiosBtn")
 	.addEventListener("click", function(){
-		sectionInformacion.innerHTML
+		sectionInformacion.innerHTML = ```
+		<div class="events">
+        	<h3 class="subTitle">Ejemplo_1</h3>
+			<ul>
+				<li>Lorem, ipsum dolor.</li>
+				<li>Lorem, ipsum.</li>
+				<li>Lorem, ipsum dolor.</li>
+				<li>Lorem, ipsum dolor.</li>
+			</ul>
+    	</div>
+		```
 		alert("EDIFICIOS FUNCION");
 	})
 //SALONES ___________________________________
@@ -47,6 +57,7 @@ document.getElementById("EnlineaBtn")
 	})
 
 /*============MAPA============*/
+
 var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
