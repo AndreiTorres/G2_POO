@@ -21,3 +21,10 @@ https://www.openstreetmap.org/#map=19/21.04819/-89.64427
 # Calendario
 
 https://docs.google.com/spreadsheets/d/1JCRgN7IMtjGCi-xUv9jH37zGM__SNaFIltJlsuRAYro/edit#gid=0 
+
+![img](img/calendario.png)
+
+
+|[<-- 4. Casos de uso](ProyectoDelEquipo/Casos_de_Uso.md)|[6. Prototipo -->](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|
+|---|---|
+
