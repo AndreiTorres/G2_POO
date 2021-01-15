@@ -115,5 +115,5 @@ Pasos:
 ![img](img/diagramaCasosUso.png)
 
 
-|[<-- 3. Historias de usuario](ProyectoDelEquipo/Historia_de_Usuario.md)|[5. Herramientas y roles de equipo -->](ProyectoDelEquipo/Roles_de_Equipo.md)|
+|[<-- 3. Historias de usuario](Historia_de_Usuario.md)|[5. Herramientas y roles de equipo -->](Roles_de_Equipo.md)|
 |---|---|

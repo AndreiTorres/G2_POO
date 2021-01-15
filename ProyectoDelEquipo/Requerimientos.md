@@ -25,5 +25,5 @@ La aplicación permite al usuario visualizar información del personal de la fac
 *    Las ubicaciones y eventos solo podrán ser visualizados si previamente han sido agregados apropiadamente con los datos requeridos como horario y locación. 
 
 
-|[<-- 1. Objetivos](ProyectoDelEquipo/Objetivos.md)|[3. Historias de usuario -->](ProyectoDelEquipo/Historia_de_Usuario.md)|
+|[<-- 1. Objetivos](Objetivos.md)|[3. Historias de usuario -->](Historia_de_Usuario.md)|
 |---|---|
