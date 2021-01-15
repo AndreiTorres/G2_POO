@@ -5,7 +5,7 @@ import prodb, {
     SortObj
   } from "./module.js";
   
-  
+  /** @type {*} */
   let db = prodb("Productdb", {
     products: `++id, name, seller, price`
   });
@@ -24,8 +24,18 @@ import prodb, {
   
   // user data
   
+
   // event listerner for create button
-  btncreate.onclick = event => {
+/**
+ *
+ *
+ * @param {*} event
+/**
+ *
+ *
+ * @param {*} event
+ */
+btncreate.onclick = event => {
     // insert values
     let flag = bulkcreate(db.products, {
       name: proname.value,
@@ -39,6 +49,7 @@ import prodb, {
     proname.value = seller.value = price.value = "";
   
     // set id textbox value
+
     getData(db.products, data => {
       userid.value = data.id + 1 || 1;
     });
@@ -49,6 +60,7 @@ import prodb, {
   };
   
   // event listerner for create button
+  
   btnread.onclick = table;
   
   // button update

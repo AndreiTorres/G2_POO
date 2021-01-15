@@ -15,6 +15,7 @@ window.onclick = function(event) {
 	}
 }
 //Toggle navBar -----------------------------------------------------------------
+
 document.getElementById("btnMenu")
 	.addEventListener("click", function(){
 		menu.classList.toggle("showMenu");
@@ -30,6 +31,7 @@ document.getElementById("EdificiosBtn")
 	})
 //SALONES ___________________________________
 document.getElementById("SalonesBtn")
+
 	.addEventListener("click", function(){
 		alert("SALONES FUNCION");
 	})
@@ -49,8 +51,10 @@ var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
 
-
+/** @type {*} */
 var southEast = L.latLng(21.04986,-89.64667);
+
+
 var northWest = L.latLng(21.04718,-89.64226);
 var bounds = L.latLngBounds(southEast, northWest);
 

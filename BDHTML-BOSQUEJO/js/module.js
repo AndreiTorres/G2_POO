@@ -12,6 +12,13 @@ const productsdb = (dbname, table) => {
          */
   };
   
+  /**
+   *
+   *
+   * @param {*} dbtable
+   * @param {*} data
+   * @return {*} 
+   */
   const bulkcreate = (dbtable, data) => {
     let flag = empty(data);
     if (flag) {
@@ -24,6 +31,13 @@ const productsdb = (dbname, table) => {
   };
   
   // create dynamic elements
+  /**
+   *
+   *
+   * @param {*} tagname
+   * @param {*} appendTo
+   * @param {*} fn
+   */
   const createEle = (tagname, appendTo, fn) => {
     const element = document.createElement(tagname);
     if (appendTo) appendTo.appendChild(element);
@@ -31,6 +45,12 @@ const productsdb = (dbname, table) => {
   };
   
   // check textbox validation
+  /**
+   *
+   *
+   * @param {*} object
+   * @return {*} 
+   */
   const empty = object => {
     let flag = false;
     for (const value in object) {
@@ -44,6 +64,12 @@ const productsdb = (dbname, table) => {
   };
   
   // getData from the database
+  /**
+   *
+   *
+   * @param {*} dbname
+   * @param {*} fn
+   */
   const getData = (dbname, fn) => {
     let index = 0;
     let obj = {};
@@ -62,6 +88,12 @@ const productsdb = (dbname, table) => {
     });
   };
   
+  /**
+   *
+   *
+   * @param {*} sortobj
+   * @return {*} 
+   */
   const SortObj = (sortobj) => {
     let obj = {};
     obj = {
