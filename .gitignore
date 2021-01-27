@@ -1,0 +1,5 @@
+#Directorio node_modules
+node_modules/
+
+#Archivos JSON. Con terminación .json
+*.json
