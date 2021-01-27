@@ -6,13 +6,17 @@ let editStatus = false;
 let id = '';
 
 //Funcion que guarda eventos
-const saveEvent =  (title, description, date, place) =>
+const saveEvent =  (title, description, date, place, build) =>
     db.collection('events').doc().set({
         title: title,
         description: description,
         date: date,
-        place: place
+        place: place,
+        build: build
     })
+
+//Funcion para obtener las coordenadas desde firebase
+const getCoordenadas = (id) => db.collection('events').doc(id).get('build');
 
 //Funcion para pedir todos los datos desde firebase
 const getEvents = () => db.collection('events').get();
@@ -49,12 +53,25 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             <h3 class="h5">${event.title}</h3>
             <p>${event.description}<br>
             ${event.date}<br>
-            ${event.place}</p>
+            ${event.place}<br>
+            ${event.build}</p>
             <div>
             <button class="btn btn-primary btn-delete" data-id="${event.id}">Delete</button>
             <button class="btn btn-secondary btn-edit" data-id="${event.id}">Edit</button>
+            <button class="btn btn-seconday btn-show" data-id="${event.id}">Show Map</button>
             </div>
             </div>`
+
+            //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map
+            const btnsShow = document.querySelectorAll('.btn-show');
+            btnsShow.forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    const doc =  await getCoordenadas(e.target.dataset.id);
+                    const event = doc.data();
+                    console.log(event.build);
+                })
+            })
+
 
             const btnsDelete = document.querySelectorAll('.btn-delete');
             btnsDelete.forEach(btn => {
@@ -68,7 +85,6 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                 btn.addEventListener('click', async (e) => {
                    const doc =  await getEvent(e.target.dataset.id);
                     const event = doc.data();
-
                     editStatus = true;
                     id = doc.id;
 
@@ -76,6 +92,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     eventForm['event-description'].value = event.description;
                     eventForm['event-date'].value = event.date;
                     eventForm['event-place'].value = event.place;
+                    eventForm['event-build'].value = event.build;
                     eventForm['btn-event-form'].innerText = 'Update';
                 })
             })
@@ -90,15 +107,17 @@ eventForm.addEventListener('submit', async (e) => {
     const description = eventForm['event-description'];
     const date = eventForm['event-date'];
     const place = eventForm['event-place'];
+    const build = eventForm['event-build'];
 
     if (!editStatus) {
-        await saveEvent(title.value, description.value, date.value, place.value);
+        await saveEvent(title.value, description.value, date.value, place.value, build.value);
     } else {
         await updateEvent(id, {
             title: title.value,
             description: description.value,
             date: date.value,
-            place: place.value
+            place: place.value,
+            build: build.value
         })
 
         //Cuando se edita un evento, el boton de save cambia a Update
