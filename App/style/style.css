@@ -8,104 +8,20 @@ body{
 }
 
 /*============BASE============*/
-.container {
-    width: 100%;
-    margin: auto;
-}
 
 /*============NAVBAR============*/
 
-.container-nav{
-    position: fixed;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 7vh;
-    background-color: rgb(103, 103, 103);
-    z-index: 10;
-}
-
-.container-nav .icon-bar-button{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    left: 1%;
-    width: 10vw;
-    height: 100%; /*87*/
-    border-right: 5px solid #343838;
-    cursor: pointer;
-}
-
-.container-nav .icon-bar{
-    margin: 9%;
-    width: 60%;
-    height: 10%;
-    background-color: #f5990f;
-}
-.container-nav .barNavBar{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #343838;
-}
-.container-nav .centerTXT{
-    color: #f5990f;
-    font-size: 36px;
-    line-height: 42px;
-}
-/* -----menu*/
-.container-nav .dropdown-menu{
-    position: absolute;
-    top: 100%;left: -45%;
-    display: flex;
-    flex-direction: column;
-
-    width: 45%; height: 100vh;
-    background-color: #676767;
-    text-align: center;
-    transition: all 300ms linear;
-    z-index: 10;
-}
-.container-nav .dropdown-menu .menu-items{
-    list-style: none;
-}
-.container-nav .dropdown-menu .menu-link{
-    display: block;
-    padding: 15px 0;
-    color: black;
-    text-decoration: none;
-    border-right: 5px solid #f5990f;
-    border-bottom: 5px solid #343838;
-}
-.container-nav .dropdown-menu .menu-link:hover{
-    background-color: #f5990f;
-    border-right: 5px solid #343838;
-    border-bottom: 5px solid #f5990f;
-}
-.container-nav .showMenu{
-    transform: translate(100%, 0);
-}
 
 /*============Container-information============*/
-.container-information{
-    position: relative;
-    display: flex;
 
-    height: 93vh; width: 100vw;
-    top: 7vh;
-}
 
 /*============MAPA============*/
-.container-information .mapa{
+main .mapa{
     position: fixed;
     height: 50%;width: 100%;
     z-index: 8;
 }
-.container-information .mapa #map{
+main .mapa #map{
     width: 100%;
     height: 100%;
     z-index: 9;
@@ -113,19 +29,19 @@ body{
 }
 
 /*============INFORMATION============*/
-.container-information .information {
+main .information {
     position: absolute;
     height: 50%;width: 100%;
     
     bottom: 0; /*porque absolute y 7%(navbar) entre dos, si fuese fixed: 50%*/
 }
-.container-information .information .asunto {
+main .information .asunto {
     display: block;
     height: 30%;width: 100%;
     background-color: #f5990f;
     text-align: center;
 }
-.container-information .information .asunto p {
+main .information .asunto p {
     color:white;
 }
 
@@ -149,6 +65,7 @@ body{
     
 }
 @media only screen and (min-width: 768px) {
+    /*
     .container-nav .icon-bar-button{
         display: none;
     }
@@ -158,5 +75,57 @@ body{
     }
     .container-information{
         background-color: aqua;
+    }
+    */
+}
+
+/*================ DIXIE ================*/
+
+body {
+    box-sizing: border-box;
+}
+
+.d-flex input {
+    margin: .9em 0em;
+}
+
+.d-flex button {
+    margin: 1.5em .6em;
+    padding: .3em 2.4em;
+}
+
+.d-flex table {
+    margin: 1em 10em;
+}
+
+table .btnedit {
+    color: lightgreen;
+    cursor: pointer;
+}
+
+table .btndelete {
+    color: tomato;
+    cursor: pointer;
+}
+
+/* messages */
+.updatemsg,
+.deletemsg,
+.insertmsg {
+    position: absolute;
+    top: -40px;
+}
+
+.movedown {
+    animation: slideup 3.4s ease;
+}
+
+@keyframes slideup {
+    50% {
+        top: 0
+    }
+
+    100% {
+        top: -40px;
     }
 }

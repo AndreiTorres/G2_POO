@@ -58,27 +58,12 @@ document.getElementById("EnlineaBtn")
 
 /*============MAPA============*/
 
-var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-        osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
-
-/** @type {*} */
-var southEast = L.latLng(21.04986,-89.64667);
-
-
-var northWest = L.latLng(21.04718,-89.64226);
-var bounds = L.latLngBounds(southEast, northWest);
-
-var map = L.map('map',{maxBounds: bounds, maxZoom: 19, minZoom: 18}).setView([21.04817, -89.64448], 18).addLayer(osm);
-
-
-var ubicacion1 = new Ubicacion("Cafeteria", 1,21.04986,-89.64667);
-console.log("hola")
-
-
-
-//var map = L.map('map').setView([21.04817, -89.64448], 18).addLayer(osm);
-//	L.marker([21.04817, -89.64448]).addTo(map).bindPopup('FMAT').openPopup();
+var osmUrl = 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
+	var map = L.map('map').setView([21.04817, -89.64448], 18).addLayer(osm);
+	L.marker([21.04817, -89.64448])
+		.addTo(map).bindPopup('FMAT').openPopup();
 
 
 
