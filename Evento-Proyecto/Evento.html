@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
+</head>
+<body>
+    
+   <div class="container p-4">
+       <div class="row">
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                    <form id="event-form">
+                        <div class="form-group">
+                            <input type="text" id="event-title" class="form-control"
+                            placeholder="Event Title" autofocus>  
+                        </div>
+                        <div class="form-group">
+                            <textarea  id="event-description"  rows="3" class="form-control"
+                            placeholder="Event Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  id="event-date" class="form-control"
+                            placeholder="Event Date and Time">
+                        </div>
+                        <div class="form-group">
+                            <input type="text"  id="event-place" class="form-control"
+                            placeholder="Event place">
+                        </div>
+                        <button class="btn btn-primary" id="btn-event-form">
+                            Save
+                        </button>
+                    </form>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-4" id="events-container"></div>
+       </div>
+   </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDjXZJwCF5PDi9LjQ5gUK_QCdcAH4BIUpE",
+    authDomain: "fmap-314f2.firebaseapp.com",
+    projectId: "fmap-314f2",
+    storageBucket: "fmap-314f2.appspot.com",
+    messagingSenderId: "11349321298",
+    appId: "1:11349321298:web:5790f669ed533fcf1b218b",
+    measurementId: "G-F6LXZK4GZF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <script src="Evento.js"></script>
+</body>
+</html>
