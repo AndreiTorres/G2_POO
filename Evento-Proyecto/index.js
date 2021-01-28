@@ -3,8 +3,10 @@ var southEast = L.latLng(21.04986,-89.64667);
 var northWest = L.latLng(21.04718,-89.64226);
 var bounds = L.latLngBounds(southEast, northWest);
 
-let mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 18}).setView([21.04817, -89.64448], 18);
+let mymap = L.map('myMap',{maxBounds: bounds}).setView([21.04817, -89.64448], 13);
 L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    minZoom: 18,
 }).addTo(mymap);
 
 var marca = L.marker([51.505, -0.09]).addTo(mymap);
@@ -100,19 +102,31 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             event.id = doc.id;
 
             //Diseño para mostrar los datos
-            eventContainer.innerHTML += `<div class="card card-body mt-2
-            border-primary">
-            <h3 class="h5">${event.title}</h3>
-            <p>${event.description}<br>
-            ${event.date}<br>
-            ${event.place}<br>
-            ${event.build}</p>
-            <div>
-            <button class="btn btn-primary btn-delete" data-id="${event.id}">Delete</button>
-            <button class="btn btn-secondary btn-edit" data-id="${event.id}">Edit</button>
-            <button class="btn btn-seconday btn-show" data-id="${event.id}">Show Map</button>
-            </div>
-            </div>`
+            eventContainer.innerHTML += `<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                 <table id="directorio" class="table table-hover" style="width:100%">
+                     <thead class="text-center">
+                     <th scope="col">Title</th>
+                     <th scope="col">Description</th>
+                     <th scope="col">Date</th>
+                     <th scope="col">Place</th>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>${event.title}</td>
+                             <td>${event.description}</td>
+                             <td>${event.date}</td>
+                             <td>${event.place}</td>
+                             <td><button class="btn btn-primary btn-delete" data-id="${event.id}">Delete</button></td>
+                             <td><button class="btn btn-secondary btn-edit" data-id="${event.id}">Edit</button></td>
+                             <td><button class="btn btn-seconday btn-show" data-id="${event.id}">Show</button></td>
+                         </tr>
+                     </tbody>
+                 </table>
+                </div>
+            </div> 
+         </div>`
 
             //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map
             const btnsShow = document.querySelectorAll('.btn-show');
@@ -121,7 +135,6 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     const doc =  await getCoordenadas(e.target.dataset.id);
                     const event = doc.data();
                     var coordenadas = event.build.split(",");
-                    //L.marker([coordenadas[0], coordenadas[1]]).addTo(mymap);
                     var latlng = L.latLng(coordenadas[0], coordenadas[1]);
                     marca.setLatLng(latlng)
                 })
