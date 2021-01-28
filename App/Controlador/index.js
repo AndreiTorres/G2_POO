@@ -1,33 +1,73 @@
 /**######################## CONTROLADOR ###################### **/
-/*============NAVBAR============*/
+
+/* MAPA =============================================================================*/
+var southEast = L.latLng(21.04986,-89.64667);
+var northWest = L.latLng(21.04718,-89.64226);
+var bounds = L.latLngBounds(southEast, northWest);
+
+let mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 18}).setView([21.04817, -89.64448], 18);
+L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+}).addTo(mymap);
+var marca = L.marker([51.505, -0.09]).addTo(mymap);
 
 
-var menu = document.getElementById("navMenu");
+/* Definición DB ===============================================================*/
+const db = firebase.firestore();
+const eventContainer = document.getElementById('events-container');
+//const sectionInformacion = document.getElementById("events-container");
 
-//Click fuera de navBar button -------------------------------------------------
-window.onclick = function(event) {
-	if (!(event.target.matches('.icon-bar-button')
-	|| event.target.matches('.icon-bar'))
-	&& menu.classList.contains("showMenu")) {
-		console.log(menu.className);
-		menu.classList.toggle("showMenu");
-		console.log(menu.className);
-	}
+//
+const getEvents = () => db.collection('events').get();
+const onGetEvents = (callback) => db.collection('events').onSnapshot(callback);
+
+/* Refrescar FUNCTION =================================================================*/
+async function refresh(){
+    const querySnapshot = await getEvents();
+    
+    eventContainer.innerHTML =
+    `<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table id="directorio" class="table table-hover" style="width:100%">
+                    <thead class="text-center">
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Place</th>
+                    </thead>
+                    <tbody id="CuerpoEventos">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+    `;
+
+    querySnapshot.forEach(doc =>{
+        //console.log(doc.data())
+        const event = doc.data();
+        //eventContainer.innerHTML +=
+        document.getElementById("CuerpoEventos").innerHTML+=
+        `<tr>
+            <td>${event.title}</td>
+            <td>${event.description}</td>
+            <td>${event.date}</td>
+            <td>${event.place}</td>
+            <td><button class="btn btn-seconday btn-show" data-id="${event.id}">Show</button></td>
+        </tr>`;
+    })
 }
-//Toggle navBar -----------------------------------------------------------------
 
-document.getElementById("btnMenu")
-	.addEventListener("click", function(){
-		menu.classList.toggle("showMenu");
-});
+/* CARGAR PÁGINA =================================================================*/
+window.addEventListener('DOMContentLoaded', refresh)
 
-//BOTONES NAVBAR ---------------------------------------------------------------
-var sectionInformacion = document.getElementById("informacion");
-//EDIFICIOS ___________________________________
+/* BOTONES NAVBAR ===============================================================*/
+// EDIFICIOS ===================================
 document.getElementById("EdificiosBtn")
 	.addEventListener("click", function(){
-		sectionInformacion.innerHTML = ```
-		<div class="events">
+		eventContainer.innerHTML = `
+		<div class="Edificios">
         	<h3 class="subTitle">Ejemplo_1</h3>
 			<ul>
 				<li>Lorem, ipsum dolor.</li>
@@ -36,34 +76,19 @@ document.getElementById("EdificiosBtn")
 				<li>Lorem, ipsum dolor.</li>
 			</ul>
     	</div>
-		```
+		`
 		alert("EDIFICIOS FUNCION");
 	})
-//SALONES ___________________________________
+//SALONES ===================================
 document.getElementById("SalonesBtn")
-
 	.addEventListener("click", function(){
 		alert("SALONES FUNCION");
 	})
-//PROFESORES ___________________________________
+//PROFESORES ===================================
 document.getElementById("ProfesoresBtn")
 	.addEventListener("click", function(){
 		alert("PROFESORES FUNCION");
 	})
-//ENLINEA ___________________________________
-document.getElementById("EnlineaBtn")
-	.addEventListener("click", function(){
-		alert("ENLINEA2 FUNCION");
-	})
-
-/*============MAPA============*/
-
-var osmUrl = 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		osm = L.tileLayer(osmUrl, {maxZoom: 20, attribution: osmAttrib});
-	var map = L.map('map').setView([21.04817, -89.64448], 18).addLayer(osm);
-	L.marker([21.04817, -89.64448])
-		.addTo(map).bindPopup('FMAT').openPopup();
-
-
-
+//EVENTOS ===================================
+document.getElementById("EventosBtn")
+	.addEventListener("click", refresh)

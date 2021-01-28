@@ -3,112 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Poo Bootstrap</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MAPA FMAT</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--OPEN STREET MAP-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-   
-    
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+
 </head>
+
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="recursos/img/LOGO.png" alt="logo" width="60" height="48" class="d-inline-block align-top">
+      <a class="navbar-brand" href="#">
+        FMAT
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ID-colapsar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="ID-colapsar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" id="EdificiosBtn">
+            <a class="nav-link active" aria-current="page" href="#">Edificios</a>
+          </li>
+          <li class="nav-item" id="SalonesBtn">
+            <a class="nav-link active" aria-current="page" href="paginas/CRUD.html">Salones</a>
+          </li>
+          <li class="nav-item" id="ProfesoresBtn">
+            <a class="nav-link active" aria-current="page" href="#">Cubículos</a>
+          </li>
+          <li class="nav-item" id="EventosBtn">
+            <a class="nav-link active" aria-current="page" href="#">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://intranet.matematicas.uady.mx/enlinea2_ago20/">EnLinea2</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="/LOGO.png" alt="" width="30" height="24" class="d-inline-block align-top">
-                FMAT
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ID-colapsar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="ID-colapsar">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Edificios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Salones</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Cubículos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Eventos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://intranet.matematicas.uady.mx/enlinea2_ago20/">EnLinea2</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-
-      <div id="myMap"></div>
-  
-      <div class="container p-4">
-            <div class="row">
-               <div class="col-md-4">
-                   <div class="card">
-                       <div class="card-body">
-                         <form id="event-form">
-                             <div class="form-group">
-                                 <input type="text" id="event-title" class="form-control"
-                                 placeholder="Event Title" autofocus>  
-                             </div>
-                             <div class="form-group">
-                                 <textarea  id="event-description"  rows="3" class="form-control"
-                                 placeholder="Event Description"></textarea>
-                             </div>
-                             <div class="form-group">
-                                 <input type="text"  id="event-date" class="form-control"
-                                 placeholder="Event Date and Time">
-                             </div>
-                             <div class="form-group">
-                                 <input type="text"  id="event-place" class="form-control"
-                                 placeholder="Event place">
-                             </div>
-                             <div class="form-group">
-                                 <select  id="event-build">
-                                     <option selected value="0"> Elige una opción </option>
-                                     <option value="21.04811, -89.64467">Edificio A</option>
-                                     <option value="21.0484, -89.64468">Edificio C</option>
-                                     <option value="21.04849, -89.64433">Edificio E</option>
-                                     <option value="21.04874, -89.64436">Edificio H</option>
-                                     <option value="21.04785, -89.64414">Centro de cómputo</option>
-                                     <option value="21.04825, -89.64452">Cafeteria</option>
-                                     <option value="21.0477, -89.6443">Explanada</option>
-                                     <option value="21.04829, -89.64379">Biblioteca</option>
-                                     <option value="21.0482, -89.64438">Plaza Roja</option>
-                                     <option value="21.04829, -89.64418">Mini Teatro</option>
-                                 </select>
-                             </div>
-                             <button class="btn btn-primary" id="btn-event-form" style="float: right;" >
-                                 Save
-                             </button>
-                         </form>
-                       </div>
-                   </div>
-               </div>
-               
-               <div class="col-md-4" id="events-container"></div>
-            </div>
-        </div>
+  <div id="myMap" class="container"></div>
+  <div class="col-md-4" id="events-container"></div>
 
 
-     
-         <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -126,104 +78,14 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
         <!-- API LEAFTLET -->
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
         <!-- BOOTSTRAP -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-      <script src="index.js"></script>
+      <!-- CONTROLADOR-->
+      <script src="Controlador/index.js"></script>
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
-  <meta http-equiv="Content-Type" content="text/html, charset=utf-8">
-  <title>Mapa simple de OpenStreetMap con Leaflet!!</title>
-  <!--BOOTSTRAP-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-    crossorigin="anonymous">
-  <!--OPEN STREET MAP-->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="">
-</head>
-
-<body>
-  <!--justify-content-between-->
-
-  <!--
-  -->
-  <nav class="fixed-top w-50 navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-      <img src="recursos/img/LOGO.png" alt="logo" width="40" height="24" class="img-fluid">
-      <a class="navbar-brand" href="#">
-        FMAT
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ID-colapsar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="ID-colapsar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Edificios</a></li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Salones</a></li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Cubículos</a></li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Eventos</a></li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" </a></li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <main class="position-absolute">
-
-    <section class="mapa position-absolute">
-      <div id="map" class="map map-home"></div>
-    </section>
-
-    <section id="informacion" class="information">
-      <div class="asunto">
-        </div>
-    </section>
-
-  </main>
-
-  <!-- BOOTSTRAP -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-  <script type="module" src="script/Controlador/index.js"></script>
-  <script type="module" src="script/Modelo/CrudEventos.js"></script>
-  <script type="module" src="script/Modelo/Evento.js"></script>
-  <script type="module" src="script/Modelo/Ubicacion.js"></script>
-  <script type="module" src="script/Modelo/Edificio.js"></script>
-  <script type="module" src="script/Modelo/Cubiculo.js"></script>
-  <script type="module" src="script/Modelo/Maestro.js"></script>
-  <script type="module" src="script/Modelo/Horario.js"></script>  
-</body>
-
 </html>

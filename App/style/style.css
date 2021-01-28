@@ -16,6 +16,7 @@ body{
 
 
 /*============MAPA============*/
+#myMap { height: 50vh; }
 /*
 main .mapa{
     position: fixed;
