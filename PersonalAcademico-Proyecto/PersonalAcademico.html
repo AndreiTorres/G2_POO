@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
+    <title>Personal Academico</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
 </head>
 <body>
@@ -13,39 +13,24 @@
           <div class="col-md-4">
               <div class="card">
                   <div class="card-body">
-                    <form id="event-form">
+                    <form id="personal-form">
                         <div class="form-group">
-                            <input type="text" id="event-title" class="form-control"
-                            placeholder="Event Title" autofocus>  
+                            <input type="text" id="personal-name" class="form-control"
+                            placeholder="Name" autofocus>  
                         </div>
                         <div class="form-group">
-                            <textarea  id="event-description"  rows="3" class="form-control"
-                            placeholder="Event Description"></textarea>
+                            <input type="text"  id="personal-email" class="form-control"
+                            placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="text"  id="event-date" class="form-control"
-                            placeholder="Event Date and Time">
+                            <input type="text"  id="personal-extension" class="form-control"
+                            placeholder="Extension">
                         </div>
                         <div class="form-group">
-                            <input type="text"  id="event-place" class="form-control"
-                            placeholder="Event place">
+                            <input type="text"  id="personal-place" class="form-control"
+                            placeholder="Cubiculo">
                         </div>
-                        <div class="form-group">
-                            <select  id="event-build">
-                                <option selected value="0"> Elige una opción </option>
-                                <option value="21.04811, -89.64467">Edificio A</option>
-                                <option value="21.0484, -89.64468">Edificio C</option>
-                                <option value="21.04849, -89.64433">Edificio E</option>
-                                <option value="21.04874, -89.64436">Edificio H</option>
-                                <option value="21.04785, -89.64414">Centro de cómputo</option>
-                                <option value="21.04825, -89.64452">Cafeteria</option>
-                                <option value="21.0477, -89.6443">Explanada</option>
-                                <option value="21.04829, -89.64379">Biblioteca</option>
-                                <option value="21.0482, -89.64438">Plaza Roja</option>
-                                <option value="21.04829, -89.64418">Mini Teatro</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary" id="btn-event-form" style="float: right;" >
+                        <button class="btn btn-primary" id="btn-personal-form" style="float: right;" >
                             Save
                         </button>
                     </form>
@@ -56,6 +41,7 @@
           <div class="col-md-4" id="events-container">
               
           </div>
+          <div class="col-md-4" id="personals-container"></div>
        </div>
    </div>
 
@@ -83,6 +69,6 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-    <script src="Evento.js"></script>
+    <script src="PersonalAcademico.js"></script>
 </body>
 </html>

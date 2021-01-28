@@ -1,3 +1,55 @@
+//MAPA
+var southEast = L.latLng(21.04986,-89.64667);
+var northWest = L.latLng(21.04718,-89.64226);
+var bounds = L.latLngBounds(southEast, northWest);
+
+let mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 18}).setView([21.04817, -89.64448], 18);
+L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+}).addTo(mymap);
+
+var marca = L.marker([51.505, -0.09]).addTo(mymap);
+/*
+var marca = L.marker([51.505, -0.09]).addTo(mymap);
+
+
+const cheto = new Evento("Cheto", 51.505, -0.09);
+const reu = new Evento("reu", 50.5, 30.5);
+
+
+document.getElementById("boton1").onclick = function(){
+   
+    var latlng = L.latLng(cheto.getX, cheto.getY);
+    marca.setLatLng(latlng)
+}
+
+document.getElementById("boton2").onclick = function(){
+    
+    var latlng = L.latLng(reu.getX, reu.getY);
+    marca.setLatLng(latlng)
+}
+
+
+const control = new controler();
+if(document.getElementById("boton1").onclick){
+    control.marcaMapa(cheto, marca);
+}
+
+if(document.getElementById("boton2").onclick){
+    control.marcaMapa(reu, marca);
+}
+
+const control = new controler();
+
+document.getElementById("boton1").onclick = function(cheto, marca){
+   
+    control.marcaMapa(cheto, marca);
+}
+
+document.getElementById("boton2").onclick = function(reu, marca){
+    
+    control.marcaMapa(reu, marca);
+}
+*/
 const db = firebase.firestore();
 const eventForm = document.getElementById('event-form');
 const eventContainer = document.getElementById('events-container');
@@ -68,7 +120,10 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                 btn.addEventListener('click', async (e) => {
                     const doc =  await getCoordenadas(e.target.dataset.id);
                     const event = doc.data();
-                    console.log(event.build);
+                    var coordenadas = event.build.split(",");
+                    //L.marker([coordenadas[0], coordenadas[1]]).addTo(mymap);
+                    var latlng = L.latLng(coordenadas[0], coordenadas[1]);
+                    marca.setLatLng(latlng)
                 })
             })
 
