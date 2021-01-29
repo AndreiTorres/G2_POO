@@ -45,18 +45,19 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             personal.id = doc.id;
 
             //Diseño para mostrar los datos
-            personalContainer.innerHTML += `<div class="card card-body mt-2
-            border-primary">
-            <h3 class="h5">${personal.name}</h3>
-            <p>${personal.email}<br>
-            ${personal.extension}<br>
-            ${personal.place}<br>
-            <div>
-            <button class="btn btn-primary btn-delete" data-id="${personal.id}">Delete</button>
-            <button class="btn btn-secondary btn-edit" data-id="${personal.id}">Edit</button>
-            </div>
-            </div>`
-
+            personalContainer.innerHTML += `<div class="text-center">
+                     <tbody>
+                         <tr>
+                             <td>${personal.name}</td>
+                             <td><a href="mailto:email@foo.com">${personal.email}</a></td>
+                             <td>${personal.extension}</td>
+                             <td>${personal.place}</td>
+                             <td><button class="btn btn-primary btn-delete" data-id="${personal.id}">Delete</button></td>
+                             <td><button class="btn btn-secondary btn-edit" data-id="${personal.id}">Edit</button></td>
+                         </tr>
+                     </tbody>
+                </div>`
+          
 
             const btnsDelete = document.querySelectorAll('.btn-delete');
             btnsDelete.forEach(btn => {
@@ -99,7 +100,7 @@ personalForm.addEventListener('submit', async (e) => {
             name: name.value,
             email: email.value,
             extension: extension.value,
-            place: place.value,
+            place: place.value
         })
 
         //Cuando se edita los datos, el boton de save cambia a Update
