@@ -1,6 +1,6 @@
 const db = firebase.firestore();
 const eventForm = document.getElementById('event-form');
-const eventContainer = document.getElementById('events-container');
+const informationContainer = document.getElementById('information-container');
 
 let editStatus = false;
 let id = '';
@@ -40,42 +40,45 @@ window.addEventListener('DOMContentLoaded', async (e) => {
     onGetEvents((querySnapshot) => {
 
         //Para limpiar la ventana y no se dupliquen los datos
-        eventContainer.innerHTML = '';
+        informationContainer.innerHTML = '';
+        //Diseño para mostrar los datos
+        informationContainer.innerHTML +=
+        `<div class="row">
+            <div class="col-lg-12">
+            <table id="directorio" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr clas="text-center">    
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Place</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoEventosCRUD">
+
+                </tbody>
+            </table>
+            </div>
+        </div>`;
+
         querySnapshot.forEach(doc => {
-    
             //Para no tener que llamar doc.data todo el tiempo
             const event = doc.data();
             event.id = doc.id;
-
-            //Diseño para mostrar los datos
-            eventContainer.innerHTML += `<div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                 <table id="directorio" class="table table-hover" style="width:100%">
-                     <thead class="text-center">
-                     <th scope="col">Title</th>
-                     <th scope="col">Description</th>
-                     <th scope="col">Date</th>
-                     <th scope="col">Place</th>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>${event.title}</td>
-                             <td>${event.description}</td>
-                             <td>${event.date}</td>
-                             <td>${event.place}</td>
-                             <td><button class="btn btn-primary btn-delete" data-id="${event.id}">Delete</button></td>
-                             <td><button class="btn btn-secondary btn-edit" data-id="${event.id}">Edit</button></td>
-                             <td><button class="btn btn-seconday btn-show" data-id="${event.id}">Show</button></td>
-                         </tr>
-                     </tbody>
-                 </table>
-                </div>
-            </div> 
-         </div>`
+            //DISEÑO CUERPO de la TABLA
+            document.getElementById("cuerpoEventosCRUD").innerHTML+=
+            `<tr>
+                <td>${event.title}</td>
+                <td>${event.description}</td>
+                <td>${event.date}</td>
+                <td>${event.place}</td>
+                <td><button class="btn btn-primary btn-delete" data-id="${event.id}">Delete</button></td>
+                <td><button class="btn btn-secondary btn-edit" data-id="${event.id}">Edit</button></td>
+                <!--<td><button class="btn btn-seconday btn-show" data-id="${event.id}">Show</button></td>-->
+            </tr>`;
 
             //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map
-            const btnsShow = document.querySelectorAll('.btn-show');
+            /*const btnsShow = document.querySelectorAll('.btn-show');
             btnsShow.forEach(btn => {
                 btn.addEventListener('click', async (e) => {
                     const doc =  await getCoordenadas(e.target.dataset.id);
@@ -84,7 +87,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     var latlng = L.latLng(coordenadas[0], coordenadas[1]);
                     marca.setLatLng(latlng)
                 })
-            })
+            })*/
 
 
             const btnsDelete = document.querySelectorAll('.btn-delete');

@@ -7,12 +7,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
 </head>
 <body>
-    
-   <div class="container p-4">
-       <div class="row">
-          <div class="col-md-10">
-              <div class="card">
-                  <div class="card-body">
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img src="../recursos/img/LOGO.png" alt="logo" width="60" height="48" class="d-inline-block align-top">
+        <a class="navbar-brand" href="#">
+        FMAT
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ID-colapsar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ID-colapsar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Edificios</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Salones</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Cubículos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Eventos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://intranet.matematicas.uady.mx/enlinea2_ago20/">EnLinea2</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ==== FORMULARIO ===== -->
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
                     <form id="personal-form">
                         <div class="form-group">
                             <input type="text" id="personal-name" class="form-control"
@@ -34,29 +71,14 @@
                             Save
                         </button>
                     </form>
-                  </div>
-              </div>
-          </div>
-       </div>
-   </div>
-   <div class="container">
-    <div class="row">
-        <table id="directorio" class="table table-hover" style="width:100%">
-            <thead>
-                <tr class="text-center">
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Extension</th>
-                    <th scope="col">Cubiculo</th>
-                    <th scope="col">Delete</th>
-                    <th scope="col">Edit</th>
-                </tr>
-            </thead>
-            <tbody id="personals-container" class="text-center"> 
-            </tbody>
-        </table>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
+</div>
+<!-- ==== DESPLIEGUE INFORMACION ===== -->
+<div class="container" id="personals-container"></div>
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
@@ -82,6 +104,6 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-    <script src="PersonalAcademico.js"></script>
+    <script src="../Controlador/CRUDpersonal.js"></script>
 </body>
 </html>
