@@ -57,6 +57,13 @@
 <!--CONTENEDOR PARA EVENTO, Y DEMÁS INFORMACIÓN-->
 <div class="container col-md-10" id="information-container"></div>
 
+<script>
+  function boton2(latlng,tarjetaTexto){
+    marca.setLatLng(latlng);
+    marca.bindPopup(tarjetaTexto);
+  }
+</script>
+
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>

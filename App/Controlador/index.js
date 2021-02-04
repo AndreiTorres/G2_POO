@@ -4,14 +4,12 @@ var southEast = L.latLng(21.04986,-89.64667);
 var northWest = L.latLng(21.04718,-89.64226);
 var bounds = L.latLngBounds(southEast, northWest);
 
-var mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 17}).setView([21.04817, -89.64448], 18);
+let mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 17}).setView([21.04817, -89.64448], 18);
     L.tileLayer('https://c.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     }).addTo(mymap);
 var marca = L.marker([21.04764, -89.644288]).addTo(mymap);
-marca.bindPopup("FMAT");
+marca.bindPopup("FMAT").openPopup();;
 
-
-/*
 //FUNCION PARA MOSTRAR COORDENADAS EN EL MAPA, AL DARLE CLICK();
 var popup = L.popup();
 function onMapClick(e) {
@@ -20,78 +18,70 @@ function onMapClick(e) {
     .setContent("Has pulsado en el mapa en la coordenada " + e.latlng.toString())
     .openOn(mymap);
 }
-mymap.on('click', onMapClick);*/
+mymap.on('click', onMapClick);
 
-/* var edificios = [[],[]]
-edificios[0].push = [
-    [21.047981, -89.644677],
-    [21.048026, -89.644554],
-    [21.048206, -89.644758],
-    [21.048236, -89.644618]
-    ] */
-
+//Al realizar click en EDIFICIOS. Igual se activa haciendo click en las demás opciones: Su lado negativo
 function clickEdificios(e){
-    if(e===1){
-        var edificioA = L.polygon([
-            [21.04789, -89.644503],
-            [21.04764, -89.644428],
-            [21.047605, -89.644594],
-            [21.047855, -89.64468]
-        ]).addTo(mymap);
-        edificioA.bindPopup("Edificia A")
-        
-        var edificioC = L.polygon([
-            [21.048432, -89.644825],
-            [21.048527, -89.644524],
-            [21.048422, -89.644487],
-            [21.048342, -89.644787]
-        ]).addTo(mymap);
-        edificioC.bindPopup("Edificio C");
-        
-        var edificioD = L.polygon([
-            [21.048537, -89.644449],
-            [21.048622, -89.644143],
-            [21.048517, -89.644111],
-            [21.048437, -89.644417]
-        ]).addTo(mymap);
-        edificioD.bindPopup("Edificio D");
-        
-        var edificioE = L.polygon([
-            [21.048206, -89.644758],
-            [21.047981, -89.644677],
-            [21.048026, -89.644554],
-            [21.048236, -89.644618]
-        ]).addTo(mymap);
-        edificioE.bindPopup("Edificio E");
-        
-        var edificioH = L.polygon([
-            [21.048748, -89.644519],
-            [21.048833, -89.644218],
-            [21.048737, -89.644186],
-            [21.048657, -89.644492]
-        ]).addTo(mymap);
-        edificioH.bindPopup("Edificio H");
+    var edificioA = L.polygon([
+        [21.04789, -89.644503],[21.04764, -89.644428],[21.047605, -89.644594],[21.047855, -89.64468]
+    ]);
+    var edificioB = L.polygon([
+        [21.048021, -89.64409],[21.047966, -89.644277],[21.047725, -89.644197],[21.047765, -89.644009]
+    ]);
+    var edificioC = L.polygon([
+        [21.048432, -89.644825],[21.048527, -89.644524],[21.048422, -89.644487],[21.048342, -89.644787]
+    ]);
+    var edificioD = L.polygon([
+        [21.048537, -89.644449],[21.048622, -89.644143],[21.048517, -89.644111],[21.048437, -89.644417]
+    ]);
+    var edificioE = L.polygon([
+        [21.048206, -89.644758],[21.047981, -89.644677],[21.048026, -89.644554],[21.048236, -89.644618]
+    ]);
+    var edificioH = L.polygon([
+        [21.048748, -89.644519],[21.048833, -89.644218],[21.048737, -89.644186],[21.048657, -89.644492]
+    ]);
+
+    if(e){ //Valor booleano
+        edificioA.addTo(mymap); edificioA.bindPopup("Edificia A");
+        edificioB.addTo(mymap); edificioB.bindPopup("Edificio B");
+        edificioC.addTo(mymap); edificioC.bindPopup("Edificio C");
+        edificioD.addTo(mymap); edificioD.bindPopup("Edificio D");
+        edificioE.addTo(mymap); edificioE.bindPopup("Edificio E");
+        edificioH.addTo(mymap); edificioH.bindPopup("Edificio H");
     } else {
-        clearImages(mymap);
+        limpiar();
     }
 }
-
-
+//Remover LAYER del mapa
+function limpiar(){
+    for(let i in mymap._layers){
+        if(mymap._layers[i]._path != undefined){
+            try{
+                //console.log(mymap._layers[i]);
+                mymap.removeLayer(mymap._layers[i]);
+            } catch(e){
+                console.log("problem with " + e + mymap._layers[i]);
+            }
+        }
+    }
+}
 
 /* Definición DB ===============================================================*/
 const db = firebase.firestore();
 const informationContainer = document.getElementById('information-container');
 //const sectionInformacion = document.getElementById("events-container");
 
-//Obtener coordenadas
+// Obtener coordenadas
 const getCoordenadas = (id,option) => db.collection(option).doc(id).get('build');
-//Funcion para pedir todos los datos desde firebase
+// Funcion para pedir todos los datos desde firebase
 const getAllInfo = (option) => db.collection(option).get();
-//Funcion que nos regresa los datos de algun TIPO/OPCION, no confundir con el de arriba
+// Funcion que nos regresa los datos de algun TIPO/OPCION, no confundir con el de arriba
 const getInfo = (id, option) => db.collection(option).doc(id).get();
-//export {getCoordenadas,getAllInfo, getInfo};
+// Export {getCoordenadas,getAllInfo, getInfo};
+
 /* Refrescar FUNCTION =================================================================*/
 async function refresh(){   //EVENTOS-------------------------------------------
+    clickEdificios(false);
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
         <div class="col-lg-12">
@@ -141,11 +131,9 @@ async function refresh(){   //EVENTOS-------------------------------------------
             marca.bindPopup(`<b>${event.title}</b><br>${event.date}`).openPopup();
         })
     })
-    clearImages(mymap);
 }
 
 /* ADMINISTRATIVO FUNCTION =================================================================*/
-
 async function refreshPersonal(){   //PERSONAL --------------------------------
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
@@ -194,12 +182,12 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
             marca.setLatLng(latlng)
         })
     })
-    clickEdificios(0);
+    clickEdificios(false);
 }
 
 /* Refrescar FUNCTION =================================================================*/
 async function refreshEdificios(){   //EVENTOS-------------------------------------------
-    clickEdificios(1);
+    clickEdificios(true);
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
         <div class="col-lg-12">
@@ -228,8 +216,6 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
         cuerpoEvento.innerHTML+=
         `<tr>
             <td>${event.title}</td>
-            <td>${event.description}</td>
-            <td>${event.date}</td>
             <td>${event.place}</td>
             <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Show</button></td>
         </tr>`;
@@ -240,16 +226,35 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
         btn.addEventListener('click', async (e) => {
             const doc =  await getCoordenadas(e.target.dataset.id,'events');
             const event = doc.data();
+            event.id = doc.id;
             var coordenadas = event.build.split(",");
             var latlng = L.latLng(coordenadas[0], coordenadas[1]);
             marca.setLatLng(latlng)
+            marca.bindPopup(`<b>${event.title}</b><br>${event.date}`).openPopup();
+            
+            //<tr> <td> <button> e.target <\> <\> <\>
+            var tarjeta = e.target.parentNode.parentNode;
+            //var boton = e.target.parentNode.sibling;
+            
+            /* for(let i=0; i<2; i++){
+                if(tarjeta.firstchild === boton){
+                    tarjeta.removeChild(tarjeta.childNodes[i])
+                } else {
+                    console.log(tarjeta);
+                }
+            } */
+            tarjeta.innerHTML =
+            `<td>${event.description}</td>
+            <td>${event.date}</td>
+            ` + tarjeta.innerHTML;
+            
+            console.log(tarjeta);
         })
     })
 }
 
-
 /* AL CARGAR PÁGINA =================================================================*/
-window.addEventListener('DOMContentLoaded', refresh)
+window.addEventListener('DOMContentLoaded', refreshEdificios)
 
 /* BOTONES NAVBAR ===============================================================*/
 // EDIFICIOS ===================================
