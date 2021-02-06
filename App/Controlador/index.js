@@ -81,16 +81,13 @@ const getInfo = (id, option) => db.collection(option).doc(id).get();
 
 /* Refrescar FUNCTION =================================================================*/
 async function refresh(){   //EVENTOS-------------------------------------------
-    clickEdificios(false);
+    clickEdificios(false);                               //Cambiar table-striped para formato de tabla
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
         <div class="col-lg-12">
-            <table id="directorioEventos" class="table table-hover" style="width:100%">
+            <table id="directorioEventos" class="table table-hover table-striped" style="width:100%">
                 <thead>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Date</th>
-                <th scope="col">Place</th>
+                <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>
                 <th scope="col">
                     <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
                         <i class="far fa-sun">CRUD</i>
@@ -103,13 +100,12 @@ async function refresh(){   //EVENTOS-------------------------------------------
             </table>
         </div>
     </div>`;
-
+    const cuerpoEvento = document.getElementById("CuerpoEventos");
     const querySnapshot = await getAllInfo('events');
     querySnapshot.forEach(doc =>{
         //Para omitir doc.data, usamos "event"
         const event = doc.data();
         event.id = doc.id;
-        const cuerpoEvento = document.getElementById("CuerpoEventos");
         cuerpoEvento.innerHTML+=
         `<tr>
             <td>${event.title}</td>
@@ -206,13 +202,12 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
             </table>
         </div>
     </div>`;
-
+    const cuerpoEvento = document.getElementById("CuerpoEventos");
     const querySnapshot = await getAllInfo('events');
-    querySnapshot.forEach(doc =>{
+    querySnapshot.forEach(doc => {
         //Para omitir doc.data, usamos "event"
         const event = doc.data();
         event.id = doc.id;
-        const cuerpoEvento = document.getElementById("CuerpoEventos");
         cuerpoEvento.innerHTML+=
         `<tr>
             <td>${event.title}</td>
@@ -232,37 +227,34 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
             marca.setLatLng(latlng)
             marca.bindPopup(`<b>${event.title}</b><br>${event.date}`).openPopup();
             
-            //<tr> <td> <button> e.target <\> <\> <\>
+            
+/*            //<tr> <td> <button> e.target <\> <\> <\>
+            console.log(event.id);
             var tarjeta = e.target.parentNode.parentNode;
+            var eventId = await getInfo(event.id, 'events');
             //var boton = e.target.parentNode.sibling;
             
-            /* for(let i=0; i<2; i++){
-                if(tarjeta.firstchild === boton){
-                    tarjeta.removeChild(tarjeta.childNodes[i])
-                } else {
-                    console.log(tarjeta);
-                }
-            } */
-            tarjeta.innerHTML =
-            `<td>${event.description}</td>
-            <td>${event.date}</td>
-            ` + tarjeta.innerHTML;
+            tarjeta.innerHTML +=
+            `<tr>
+                <td>${eventId.description}</td>
+                <td>${eventId.date}</td>
+            </tr>`
             
-            console.log(tarjeta);
+            console.log(tarjeta);*/
         })
     })
 }
 
 /* AL CARGAR PÁGINA =================================================================*/
-window.addEventListener('DOMContentLoaded', refreshEdificios)
+window.addEventListener('DOMContentLoaded', refresh);
 
 /* BOTONES NAVBAR ===============================================================*/
 // EDIFICIOS ===================================
 document.getElementById("EdificiosBtn")
-	.addEventListener("click", refreshEdificios)
+	.addEventListener("click", refreshEdificios);
 //PROFESORES ===================================
 document.getElementById("ProfesoresBtn")
-	.addEventListener("click", refreshPersonal)
+	.addEventListener("click", refreshPersonal);
 //EVENTOS ===================================
 document.getElementById("EventosBtn")
-	.addEventListener("click", refresh)
+	.addEventListener("click", refresh);
