@@ -121,4 +121,4 @@ After discussing many ideas we have decided which tools to use, I began to inves
 
 ## Schedule
 
-![img](img/calendario.png)
+![img](img/schedule.jpg)
