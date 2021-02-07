@@ -35,7 +35,7 @@ const eventForm = document.getElementById('event-form');
 const informationContainer = document.getElementById('information-container');
 ```
 
-### White Space
+### Identation
 
 We used 4 spaces for identation. Unlike in idiomatic whitespace must not be used _inside_ parentheses between the parentheses and their Contents
 ```javascript
