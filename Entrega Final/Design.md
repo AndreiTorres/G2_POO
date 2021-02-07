@@ -5,7 +5,7 @@ The application allows the user to view information about the faculty staff. Thi
 #### [Prototipe](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width) for more information
 
 # Classes Diagram
-![img](img/)
+![img](img/classes.png)
 
 # Package Diagram
 ![img](img/packages.png)
