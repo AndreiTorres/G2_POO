@@ -45,7 +45,9 @@ The qualification of each member will be awarded according to the following metr
 | Commits           |    1    | 
 | Total             |    10   | 
 
-##### Jesus Andrei Torres Landero
+### Individual Contribution
+
+##### Jesús Andrei Torres Landero
 
 | Evaluation aspec  | Points  | 
 | ----------------- | ------- | 
