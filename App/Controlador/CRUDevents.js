@@ -18,13 +18,13 @@ const saveEvent =  (title, description, date, place, build) =>
 //Funcion para obtener las coordenadas desde firebase
 const getCoordenadas = (id) => db.collection('events').doc(id).get('build');
 
-//Funcion para pedir todos los datos desde firebase
+//Function to request all data from firebase
 const getEvents = () => db.collection('events').get();
 
-//Funcion que nos regrese un evento, no confundir con el de arriba
+//Function that an event returns us, not to be confused with the one above
 const getEvent = (id) => db.collection('events').doc(id).get();
 
-//Funciona que actualiza los datos cada que se realiza una accion
+//It updates the data every time an action is performed
 const onGetEvents = (callback) => db.collection('events').onSnapshot(callback);
 
 //Funcion que borra evento
