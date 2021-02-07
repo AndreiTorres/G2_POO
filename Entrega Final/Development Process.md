@@ -35,10 +35,14 @@ In addition, each progress of each member is notified to the team's WhatsApp gro
 ### Metric
 The qualification of each member will be awarded according to the following metric
 
-| Evaluation aspec  | Excellent 100% | Good 80% | Regular 60% | Deficient 10% | 
-| -------------- | ---------------------------------------------------------------- | ------------------------------------------ | ----------------------------------|------------------------------------------------------------------------|
-| Participation  | The student was interested and contributed ideas to the project. | The student was interested in the project. | The student entered the meetings. | The student did not show interest in contributing ideas to the project. |
-| Investigation  | The student investigated useful technologies, frameworks, and information. | The student shared videos and internet pages. | The student read information from internet pages | The student did not read information or watch videos for the project. |
+| Evaluation aspec  | Points  | 
+| ----------------- | ------- | 
+| Tasks             |    2    |   
+| Meetings          |    2    | 
+| Code              |    2    | 
+| Investigation     |    2    | 
+| Ideas             |    1    | 
+| Commits           |    1    | 
 
 ### Individual reports
 
