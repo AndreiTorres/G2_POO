@@ -119,3 +119,6 @@ After discussing many ideas we have decided which tools to use, I began to inves
 
 ***Final report***
 
+## Schedule
+
+![img](img/calendario.png)
