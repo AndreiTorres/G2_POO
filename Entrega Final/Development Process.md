@@ -33,7 +33,7 @@ In addition, each progress of each member is notified to the team's WhatsApp gro
 
 
 ### Metric
-The qualification of each member will be awarded according to the following metric
+The qualification of each member will be awarded according to the following metric.
 
 | Evaluation aspec  | Points  | 
 | ----------------- | ------- | 
@@ -43,6 +43,55 @@ The qualification of each member will be awarded according to the following metr
 | Investigation     |    2    | 
 | Ideas             |    1    | 
 | Commits           |    1    | 
+| Total             |    10   | 
+
+##### Jesus Andrei Torres Landero
+
+| Evaluation aspec  | Points  | 
+| ----------------- | ------- | 
+| Tasks             |    2    |   
+| Meetings          |    2    | 
+| Code              |    2    | 
+| Investigation     |    2    | 
+| Ideas             |    1    | 
+| Commits           |    1    | 
+| Total             |    10   |
+
+##### José Ángel Ruiz Escalante
+
+| Evaluation aspec  | Points  | 
+| ----------------- | ------- | 
+| Tasks             |    2    |   
+| Meetings          |    2    | 
+| Code              |    2    | 
+| Investigation     |    2    | 
+| Ideas             |    1    | 
+| Commits           |    1    | 
+| Total             |    10   |
+
+##### Daniel Salvador Amaya Tapia
+
+| Evaluation aspec  | Points  | 
+| ----------------- | ------- | 
+| Tasks             |    2    |   
+| Meetings          |    2    | 
+| Code              |    2    | 
+| Investigation     |    2    | 
+| Ideas             |    1    | 
+| Commits           |    1    | 
+| Total             |    10   |
+
+##### Farid Antonio Pacheco Pérez
+
+| Evaluation aspec  | Points  | 
+| ----------------- | ------- | 
+| Tasks             |    0    |   
+| Meetings          |    1    | 
+| Code              |    0    | 
+| Investigation     |    1    | 
+| Ideas             |    1    | 
+| Commits           |    0    | 
+| Total             |    3    |
 
 ### Individual reports
 
