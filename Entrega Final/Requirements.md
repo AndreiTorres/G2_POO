@@ -23,6 +23,8 @@ The application allows the user to view information about the faculty staff. Thi
 *    The information inside will be modified by an administrator, while all those who are not will only be able to see the different sections.
 *    Locations and events can only be viewed if they have previously been properly added with the required data such as time and location. 
 
+## Changes
++ Show in the map the exact location of the teacher's cubicle was removed.
 
 # USE CASES
 
