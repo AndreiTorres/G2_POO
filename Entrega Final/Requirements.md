@@ -25,6 +25,7 @@ The application allows the user to view information about the faculty staff. Thi
 
 ## Changes
 + Show in the map the exact location of the teacher's cubicle was removed.
++ The search bar was removed.
 
 # USE CASES
 
