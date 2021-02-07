@@ -5,7 +5,7 @@ const informationContainer = document.getElementById('information-container');
 let editStatus = false;
 let id = '';
 
-//Funcion que guarda eventos
+//Function that saves events
 const saveEvent =  (title, description, date, place, build) =>
     db.collection('events').doc().set({
         title: title,
@@ -15,7 +15,7 @@ const saveEvent =  (title, description, date, place, build) =>
         build: build
     })
 
-//Funcion para obtener las coordenadas desde firebase
+//Function to get the coordinates from firebase
 const getCoordenadas = (id) => db.collection('events').doc(id).get('build');
 
 //Function to request all data from firebase
@@ -27,21 +27,20 @@ const getEvent = (id) => db.collection('events').doc(id).get();
 //It updates the data every time an action is performed
 const onGetEvents = (callback) => db.collection('events').onSnapshot(callback);
 
-//Funcion que borra evento
+//Function that deletes event
 const deleteEvent = id => db.collection('events').doc(id).delete();
 
-//Funcion que actualiza el evento
+//Function that updates the event
 const updateEvent = (id, updatedEvent) => db.collection('events').doc(id).update(updatedEvent);
 
-//Cuando carga el navegador se agrega una funcion que viene de firebase
-//para actualizar el contenido en tiempo real
+//When the browser loads, a function that comes from firebase is added to update the content in real time
 window.addEventListener('DOMContentLoaded', async (e) => {
-    //Cada que ocurre un evento se ejecuta la siguiente funcion para actualizar el contenido
+    //Every event that occurs, the following function is executed to update the content
     onGetEvents((querySnapshot) => {
 
-        //Para limpiar la ventana y no se dupliquen los datos
+        //To clean the window and not duplicate data
         informationContainer.innerHTML = '';
-        //Diseño para mostrar los datos
+        //Layout to display the data
         informationContainer.innerHTML +=
         `<div class="row">
             <div class="col-lg-12">
@@ -62,10 +61,10 @@ window.addEventListener('DOMContentLoaded', async (e) => {
         </div>`;
 
         querySnapshot.forEach(doc => {
-            //Para no tener que llamar doc.data todo el tiempo
+            //So you don't have to call doc.data all the time
             const event = doc.data();
             event.id = doc.id;
-            //DISEÑO CUERPO de la TABLA
+            //Table Design
             document.getElementById("cuerpoEventosCRUD").innerHTML+=
             `<tr>
                 <td>${event.title}</td>
