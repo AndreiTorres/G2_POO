@@ -35,3 +35,9 @@ Cloud Firestore is a flexible and scalable database for server, mobile, and web 
 Like Realtime Database, Cloud Firestore uses data synchronization to update data from any connected device. However, it is also designed to run single and simple recovery queries efficiently.
 
 More information here [Cloud Firestore](https://firebase.google.com/docs/firestore?hl=es)
+
+# Bootstrap
+
+![img](img/bootstrap.pgn)
+
+Bootstrap is a cross-platform library or open source toolkit for website design and web applications. It contains design templates with typography, forms, buttons, boxes, navigation menus, and other HTML and CSS-based design elements, as well as additional JavaScript extensions. Unlike many web frameworks, it only deals with front-end development.
