@@ -1,5 +1,6 @@
 # Open Street Map
 ![img](img/osm.jpg)
+
 OpenStreetMap provides map data for thousands of websites, mobile applications, and hardware devices
 
 ### Why we used it?
