@@ -14,11 +14,10 @@ Profesor: Dr. Edgar Antonio Cambranes Martínez
 # Project
 ## [Binacle](ProyectoDelEquipo/Bitacora.txt)
 ## Index
-* 1.[Objetives](Entrega Final/Objetives.md)
-* 2.[Requirements](Entrega Final/Requirements.md)
-* 3.[Design](Entrega Final/Design.md)
-* 4.[Coding Standart](ProyectoDelEquipo/Coding_Standart.md)
-* 5.[Implementation](ProyectoDelEquipo/Implementation.md)
-* 6.[Development Process](ProyectoDelEquipo/Development Process.md)
-* 7.[Frameworks/API's](ProyectoDelEquipo/Apis_Frameworks.md)
+* 1.[ Objetivos](ProyectoDelEquipo/Objetivos.md)
+* 2.[ Requerimientos](ProyectoDelEquipo/Requerimientos.md)
+* 3.[ Historias de usuario](ProyectoDelEquipo/Historia_de_Usuario.md)
+* 4.[ Casos de uso](ProyectoDelEquipo/Casos_de_Uso.md)
+* 5.[ Herramientas y roles de equipo](ProyectoDelEquipo/Roles_de_Equipo.md)
+* 6.[Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)
 
