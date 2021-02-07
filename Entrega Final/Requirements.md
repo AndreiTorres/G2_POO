@@ -166,5 +166,7 @@ Steps:
 * As a user I can see the navbar fixed to the right in desktop mode
 
 
+### Uses case diagram
 
+![img](img/diagramaCasosUso.png)
 
