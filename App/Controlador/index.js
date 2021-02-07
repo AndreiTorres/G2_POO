@@ -79,6 +79,14 @@ const getAllInfo = (option) => db.collection(option).get();
 const getInfo = (id, option) => db.collection(option).doc(id).get();
 // Export {getCoordenadas,getAllInfo, getInfo};
 
+
+/* <th scope="col">
+                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
+                        <i class="far fa-sun">CRUD</i>
+                    </a>
+                </th>
+ */
+
 /* Refrescar FUNCTION =================================================================*/
 async function refresh(){   //EVENTOS-------------------------------------------
     clickEdificios(false);                               //Cambiar table-striped para formato de tabla
@@ -88,11 +96,20 @@ async function refresh(){   //EVENTOS-------------------------------------------
             <table id="directorioEventos" class="table table-hover table-striped" style="width:100%">
                 <thead>
                 <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>
-                <th scope="col">
-                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
-                        <i class="far fa-sun">CRUD</i>
-                    </a>
+                
+
+                <th scope="col" >
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">CRUDS </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="paginas/CRUDevents.html">EVENTOS</a></li>
+                            <li class="divider"></li>
+                            <li><a href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                        </ul>
+                    </div>
                 </th>
+
+
                 </thead>
                 <tbody id="CuerpoEventos">
                     
@@ -181,6 +198,14 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
     clickEdificios(false);
 }
 
+/*
+<th scope="col">
+                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
+                        <i class="far fa-sun">CRUD</i>
+                    </a>
+                </th>
+ */
+
 /* Refrescar FUNCTION =================================================================*/
 async function refreshEdificios(){   //EVENTOS-------------------------------------------
     clickEdificios(true);
@@ -191,9 +216,18 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
                 <thead>
                 <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>
                 <th scope="col">
-                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
-                        <i class="far fa-sun">CRUD</i>
-                    </a>
+                    
+                <th scope=""col class="container">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">CRUDS </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="paginas/CRUDevents.html">EVENTOS</a></li>
+                            <li class="divider"></li>
+                            <li><a href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                        </ul>
+                    </div>
+                </th>
+
                 </th>
                 </thead>
                 <tbody id="CuerpoEventos">
