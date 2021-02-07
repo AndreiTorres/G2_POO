@@ -13,14 +13,15 @@ The application allows the user to view information about the faculty staff. Thi
 # MVC Evidence
 
 + Model
-    + model
+    + configDB.js
 
 + View
-    + view
+    + index.html
+    + CRUDevents.html
+    + CRUDpersonal.html
+    + syle.css
 
 + Controler
-    + configDB
-    + CRUDevents
-    + CRUDpersonal
-    + index
-    + mapa
+    + CRUDevents.js
+    + CRUDpersonal.js
+    + index.js
