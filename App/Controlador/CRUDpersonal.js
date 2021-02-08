@@ -5,7 +5,7 @@ const personalContainer = document.getElementById('personals-container');
 let editStatus = false;
 let id = '';
 
-//Funcion que guarda personal academico
+//Academic staff saving function
 const savePersonal =  (name, email, extension, place) =>
     db.collection('personal').doc().set({
         name: name,
@@ -14,30 +14,30 @@ const savePersonal =  (name, email, extension, place) =>
         place: place,
     })
 
-//Funcion para pedir todos los datos desde firebase
+//Function to request all data from firebase
 const getAllPersonal = () => db.collection('personal').get();
 
-//Funcion que nos regresa los datos de algun personal, no confundir con el de arriba
+//Function that returns the data of some personnel, not to be confused with the one above
 const getPersonal = (id) => db.collection('personal').doc(id).get();
 
-//Funciona que actualiza los datos cada que se realiza una accion
+//It works that updates the data every time an action is performed
 const onGetPersonal = (callback) => db.collection('personal').onSnapshot(callback);
 
-//Funcion que borra personal
+//Personal deleting function
 const deletePersonal = id => db.collection('personal').doc(id).delete();
 
-//Funcion que actualiza los datos de la persona
+//Function that updates the person's data
 const updatePersonal = (id, updatedPersonal) => db.collection('personal').doc(id).update(updatedPersonal);
 
-//Cuando carga el navegador se agrega una funcion que viene de firebase
-//para actualizar el contenido en tiempo real
+//When the browser loads a function that comes from firebase is added
+//to update content in real time
 window.addEventListener('DOMContentLoaded', async (e) => {
-    //Cada que ocurre un evento se ejecuta la siguiente funcion para actualizar el contenido
+    //Every event that occurs, the following function is executed to update the content
     onGetPersonal((querySnapshot) => {
 
-        //Para limpiar la ventana y no se dupliquen los datos
+        //To clean the window and not duplicate data
         personalContainer.innerHTML = '';
-        //Diseño para mostrar los datos
+        //Layout to display the data
         personalContainer.innerHTML +=
         `<div class="row">
             <table id="directorio" class="table table-hover" style="width:100%">
@@ -56,10 +56,10 @@ window.addEventListener('DOMContentLoaded', async (e) => {
         </div>`
         querySnapshot.forEach(doc => {
     
-            //Para no tener que llamar doc.data todo el tiempo
+            //So you don't have to call doc.data all the time
             const personal = doc.data();
             personal.id = doc.id;
-            //DISEÑO interno CUERPO de la TABLA
+            //Internal DESIGN BOARD BODY
             document.getElementById("cuerpoPersonalCRUD").innerHTML+=
             `<tr>
                 <td>${personal.name}</td>
@@ -114,8 +114,8 @@ personalForm.addEventListener('submit', async (e) => {
             place: place.value
         })
 
-        //Cuando se edita los datos, el boton de save cambia a Update
-        //Esta parte regresa el boton a su funcionamiento normal
+        //When the data is edited, the save button changes to Update
+        //This part returns the button to normal operation.
         editStatus = false;
         id = '';
         personalForm['btn-personal-form'].innerText = 'Save';

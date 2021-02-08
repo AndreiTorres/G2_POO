@@ -1,5 +1,5 @@
-/**######################## CONTROLADOR ###################### **/
-/* MAPA =============================================================================*/
+/**######################## CONTROLER ###################### **/
+/* MAP =============================================================================*/
 var southEast = L.latLng(21.04986,-89.64667);
 var northWest = L.latLng(21.04718,-89.64226);
 var bounds = L.latLngBounds(southEast, northWest);
@@ -10,7 +10,7 @@ let mymap = L.map('myMap',{maxBounds: bounds, maxZoom: 18, minZoom: 17}).setView
 var marca = L.marker([21.04764, -89.644288]).addTo(mymap);
 marca.bindPopup("FMAT").openPopup();;
 
-//FUNCION PARA MOSTRAR COORDENADAS EN EL MAPA, AL DARLE CLICK();
+//FUNCTION TO SHOW COORDINATES ON THE MAP;
 var popup = L.popup();
 function onMapClick(e) {
     popup
@@ -20,7 +20,7 @@ function onMapClick(e) {
 }
 mymap.on('click', onMapClick);
 
-//Al realizar click en EDIFICIOS. Igual se activa haciendo click en las demás opciones: Su lado negativo
+//By clicking on BUILDINGS. The same is activated by clicking on the other options: Its negative side
 function clickEdificios(e){
     var edificioA = L.polygon([
         [21.04789, -89.644503],[21.04764, -89.644428],[21.047605, -89.644594],[21.047855, -89.64468]
@@ -41,7 +41,7 @@ function clickEdificios(e){
         [21.048748, -89.644519],[21.048833, -89.644218],[21.048737, -89.644186],[21.048657, -89.644492]
     ]);
 
-    if(e){ //Valor booleano
+    if(e){ //Boolean value
         edificioA.addTo(mymap); edificioA.bindPopup("Edificia A");
         edificioB.addTo(mymap); edificioB.bindPopup("Edificio B");
         edificioC.addTo(mymap); edificioC.bindPopup("Edificio C");
@@ -52,7 +52,7 @@ function clickEdificios(e){
         limpiar();
     }
 }
-//Remover LAYER del mapa
+//Remove LAYER from the map
 function limpiar(){
     for(let i in mymap._layers){
         if(mymap._layers[i]._path != undefined){
@@ -66,23 +66,23 @@ function limpiar(){
     }
 }
 
-/* Definición DB ===============================================================*/
+/* DB Definition ===============================================================*/
 const db = firebase.firestore();
 const informationContainer = document.getElementById('information-container');
 //const sectionInformacion = document.getElementById("events-container");
 
-// Obtener coordenadas
+// Get coordinates
 const getCoordenadas = (id,option) => db.collection(option).doc(id).get('build');
-// Funcion para pedir todos los datos desde firebase
+// Function to request all data from firebase
 const getAllInfo = (option) => db.collection(option).get();
-// Funcion que nos regresa los datos de algun TIPO/OPCION, no confundir con el de arriba
+// Function that returns us the data of some TYPE / OPTION, not to be confused with the one above
 const getInfo = (id, option) => db.collection(option).doc(id).get();
 // Export {getCoordenadas,getAllInfo, getInfo};
 
 
-/* Refrescar FUNCTION =================================================================*/
-async function refresh(){   //EVENTOS-------------------------------------------
-    clickEdificios(false);                               //Cambiar table-striped para formato de tabla
+/* Refresh FUNCTION =================================================================*/
+async function refresh(){   //EVENTS-------------------------------------------
+    clickEdificios(false);                               //Change table-striped for table format
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
         <div class="col-lg-12">
@@ -111,7 +111,7 @@ async function refresh(){   //EVENTOS-------------------------------------------
     const cuerpoEvento = document.getElementById("CuerpoEventos");
     const querySnapshot = await getAllInfo('events');
     querySnapshot.forEach(doc =>{
-        //Para omitir doc.data, usamos "event"
+        //To omit doc.data, we use "event" omit
         const event = doc.data();
         event.id = doc.id;
         cuerpoEvento.innerHTML+=
@@ -120,10 +120,10 @@ async function refresh(){   //EVENTOS-------------------------------------------
             <td>${event.description}</td>
             <td>${event.date}</td>
             <td>${event.place}</td>
-            <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Show</button></td>
+            <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Mostar</button></td>
         </tr>`;
     })
-    //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map ==========
+    //Shows the coordinates of the building when the Show Map button is pressed ==========
     const btnsShow = document.querySelectorAll('.btn-show');
     btnsShow.forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -137,7 +137,7 @@ async function refresh(){   //EVENTOS-------------------------------------------
     })
 }
 
-/* ADMINISTRATIVO FUNCTION =================================================================*/
+/* ADMINISTRATIVE FUNCTION =================================================================*/
 async function refreshPersonal(){   //PERSONAL --------------------------------
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
@@ -182,7 +182,7 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
         </tr>`;
     })
 
-    //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map ==========
+    //Shows the coordinates of the building when the Show Map button is pressed==========
     const btnsShow = document.querySelectorAll('.btn-show');
     btnsShow.forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -196,8 +196,8 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
     clickEdificios(false);
 }
 
-/* Refrescar FUNCTION =================================================================*/
-async function refreshEdificios(){   //EVENTOS-------------------------------------------
+/* Refresh FUNCTION =================================================================*/
+async function refreshEdificios(){   //EVENTS-------------------------------------------
     clickEdificios(true);
     informationContainer.innerHTML =
     `<div class="row d-flex justify-content-center">
@@ -227,7 +227,7 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
     const cuerpoEvento = document.getElementById("CuerpoEventos");
     const querySnapshot = await getAllInfo('events');
     querySnapshot.forEach(doc => {
-        //Para omitir doc.data, usamos "event"
+        //To omit doc.data, we use "event"
         const event = doc.data();
         event.id = doc.id;
         cuerpoEvento.innerHTML+=
@@ -236,10 +236,10 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
             <td>${event.description}</td>
             <td>${event.date}</td>
             <td>${event.place}</td>
-            <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Show</button></td>
+            <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Mostrar</button></td>
         </tr>`;
     })
-    //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map ==========
+    //Shows the coordinates of the building when the Show Map button is pressed ==========
     const btnsShow = document.querySelectorAll('.btn-show');
     btnsShow.forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -267,16 +267,16 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
     })
 }
 
-/* AL CARGAR PÁGINA =================================================================*/
+/* WHEN LOADING PAGE =================================================================*/
 window.addEventListener('DOMContentLoaded', refresh);
 
-/* BOTONES NAVBAR ===============================================================*/
-// EDIFICIOS ===================================
+/* NAVBAR BUTTONS ===============================================================*/
+// BUILDINGS ===================================
 document.getElementById("EdificiosBtn")
 	.addEventListener("click", refreshEdificios);
-//PROFESORES ===================================
+//PROFESOR ===================================
 document.getElementById("ProfesoresBtn")
 	.addEventListener("click", refreshPersonal);
-//EVENTOS ===================================
+//EVENTS ===================================
 document.getElementById("EventosBtn")
 	.addEventListener("click", refresh);

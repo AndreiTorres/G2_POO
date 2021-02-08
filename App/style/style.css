@@ -7,15 +7,10 @@ body{
     overflow-x: hidden;
 }
 
-/*============BASE============*/
-
-/*============NAVBAR============*/
-
-
 /*============Container-information============*/
 
 
-/*============MAPA============*/
+/*============MAP============*/
 #myMap { height: 50vh; }
 /*
 main .mapa{
@@ -82,4 +77,4 @@ main .information .asunto p {
         background-color: aqua;
     }
     */
-}
+

@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                 <!--<td><button class="btn btn-seconday btn-show" data-id="${event.id}">Show</button></td>-->
             </tr>`;
 
-            //Muestra las coordenadas del edificio cuando se aprieta el boton Show Map
+            // Shows the building coordinates when the Show Map button is pressed
             /*const btnsShow = document.querySelectorAll('.btn-show');
             btnsShow.forEach(btn => {
                 btn.addEventListener('click', async (e) => {
@@ -136,8 +136,8 @@ eventForm.addEventListener('submit', async (e) => {
             build: build.value
         })
 
-        //Cuando se edita un evento, el boton de save cambia a Update
-        //Esta parte regresa el boton a su funcionamiento normal
+        //When an event is edited, the save button changes to Update
+        //This part returns the button to normal operation.
         editStatus = false;
         id = '';
         eventForm['btn-event-form'].innerText = 'Save';
