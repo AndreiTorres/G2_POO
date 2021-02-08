@@ -80,13 +80,6 @@ const getInfo = (id, option) => db.collection(option).doc(id).get();
 // Export {getCoordenadas,getAllInfo, getInfo};
 
 
-/* <th scope="col">
-                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
-                        <i class="far fa-sun">CRUD</i>
-                    </a>
-                </th>
- */
-
 /* Refrescar FUNCTION =================================================================*/
 async function refresh(){   //EVENTOS-------------------------------------------
     clickEdificios(false);                               //Cambiar table-striped para formato de tabla
@@ -95,21 +88,19 @@ async function refresh(){   //EVENTOS-------------------------------------------
         <div class="col-lg-12">
             <table id="directorioEventos" class="table table-hover table-striped" style="width:100%">
                 <thead>
-                <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>
-                
-
-                <th scope="col" >
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">CRUDS </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="paginas/CRUDevents.html">EVENTOS</a></li>
-                            <li class="divider"></li>
-                            <li><a href="paginas/CRUDpersonal.html">PERSONAL</a></li>
-                        </ul>
-                    </div>
-                </th>
-
-
+                    <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>                
+                    <th scope="col" >
+                        <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle far fa-sun" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        CRUDS
+                        </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
+                                <li class="divider"></li>
+                                <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                            </ul>
+                        </div>
+                    </th>
                 </thead>
                 <tbody id="CuerpoEventos">
                     
@@ -157,11 +148,18 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
                     <th scope="col">Correo</th>
                     <th scope="col">Extension</th>
                     <th scope="col">Cubiculo</th>
-                    <th scope="col">
-                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDpersonal.html">
-                        <i class="far fa-sun">CRUD</i>
-                    </a>
-                </th>
+                    <th scope="col" >
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle far fa-sun" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                CRUDS
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
+                                <li class="divider"></li>
+                                <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                            </ul>
+                        </div>
+                    </th>
                 </thead>
                 <tbody id="CuerpoPersonal">
                 </tbody>
@@ -198,14 +196,6 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
     clickEdificios(false);
 }
 
-/*
-<th scope="col">
-                    <a class="btn btn-secondary" id="btnCRUD" href="paginas/CRUDevents.html">
-                        <i class="far fa-sun">CRUD</i>
-                    </a>
-                </th>
- */
-
 /* Refrescar FUNCTION =================================================================*/
 async function refreshEdificios(){   //EVENTOS-------------------------------------------
     clickEdificios(true);
@@ -216,18 +206,16 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
                 <thead>
                 <th colspan="4" class="text-center"><h3>EVENTOS</h3></th>
                 <th scope="col">
-                    
-                <th scope=""col class="container">
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">CRUDS </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="paginas/CRUDevents.html">EVENTOS</a></li>
+                    <button class="btn btn-secondary dropdown-toggle far fa-sun" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    CRUDS
+                    </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
                             <li class="divider"></li>
-                            <li><a href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                            <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
                         </ul>
                     </div>
-                </th>
-
                 </th>
                 </thead>
                 <tbody id="CuerpoEventos">
@@ -245,6 +233,8 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
         cuerpoEvento.innerHTML+=
         `<tr>
             <td>${event.title}</td>
+            <td>${event.description}</td>
+            <td>${event.date}</td>
             <td>${event.place}</td>
             <td><button class="btn btn-secondary btn-show" data-id="${event.id}">Show</button></td>
         </tr>`;
@@ -259,9 +249,7 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
             var coordenadas = event.build.split(",");
             var latlng = L.latLng(coordenadas[0], coordenadas[1]);
             marca.setLatLng(latlng)
-            marca.bindPopup(`<b>${event.title}</b><br>${event.date}`).openPopup();
-            
-            
+            marca.bindPopup(`<b>${event.title}</b><br>${event.date}`).openPopup();   
 /*            //<tr> <td> <button> e.target <\> <\> <\>
             console.log(event.id);
             var tarjeta = e.target.parentNode.parentNode;
