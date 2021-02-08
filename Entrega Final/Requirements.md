@@ -173,7 +173,5 @@ Steps:
 
 ![img](img/diagramaCasosUso.png)
 
-
-
-|[ :arrow_left: 1. Objetives](Objetives.md)|[ 3. Design :arrow_right:](Design.md)|
+|[:arrow_left: 1. Objetives](Objetives.md)|[3. Design :arrow_right:](Design.md)|
 |---|---|

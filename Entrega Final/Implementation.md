@@ -6,5 +6,5 @@
 
 ![img](img/commits.jpg)
 
-|[ :arrow_left: 3. Design](Design.md)|[ 5. Development Process :arrow_right:]("Development Process.md")|
+|[:arrow_left: 3. Design](Design.md)|[5. Development Process :arrow_right:](Development_Process.md)|
 |---|---|

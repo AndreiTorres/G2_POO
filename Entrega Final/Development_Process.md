@@ -134,5 +134,5 @@ We finally change the DB from dexie to Cloud Firestore. The app was finished and
 ![img](img/schedule.jpg)
 
 
-|[ :arrow_left: 4. Implementation](Implementation.md)|[ 6. Coding Standar :arrow_right:](Coding_Standard.md)|
+|[:arrow_left: 4. Implementation](Implementation.md)|[6. Coding Standar :arrow_right:](Coding_Standard.md)|
 |---|---|
