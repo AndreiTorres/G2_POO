@@ -3,3 +3,12 @@ node_modules/
 
 #Archivos JSON. Con terminación .json
 *.json
+
+#Directorio Evento-Proyecto
+Evento-Proyecto/
+
+#Directorio PersonalAcademico-Proyecto
+PersonalAcademico-Proyecto/
+
+#Directorio ProyectoDelEquipo
+ProyectoDelEquipo/
