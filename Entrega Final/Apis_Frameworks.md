@@ -43,3 +43,6 @@ More information here [Cloud Firestore](https://firebase.google.com/docs/firesto
 Bootstrap is a cross-platform library or open source toolkit for website design and web applications. It contains design templates with typography, forms, buttons, boxes, navigation menus, and other HTML and CSS-based design elements, as well as additional JavaScript extensions. Unlike many web frameworks, it only deals with front-end development.
 
 More information here [Bootstrap](https://getbootstrap.com/)
+
+|[ :arrow_left: 6. Coding Standar](Coding_Standard.md)|[ 8. Prototype :arrow_right:](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|
+|---|---|
