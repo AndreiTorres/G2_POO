@@ -44,5 +44,5 @@ Bootstrap is a cross-platform library or open source toolkit for website design 
 
 More information here [Bootstrap](https://getbootstrap.com/)
 
-|[ :arrow_left: 6. Coding Standar](Coding_Standard.md)|[ 8. Prototype :arrow_right:](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|
+|[:arrow_left: 6. Coding Standar](Coding_Standard.md)|[8. Prototype :arrow_right:](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|
 |---|---|

@@ -23,5 +23,5 @@ disposition and thus achieve a faster search of the spaces.
 *         General public: They can only see and use the app tools.
 
 
-|[ :arrow_left: 8. Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|[ 2. Functional Requirements :arrow_right:](Requirements.md)|
+|[:arrow_left: 8. Prototipo](https://www.figma.com/proto/53Esj8R5f7GGK57IqEFovv/Proyecto-POO?node-id=32%3A50&scaling=scale-down-width)|[2. Functional Requirements :arrow_right:](Requirements.md)|
 |---|---|

@@ -26,5 +26,5 @@ The application allows the user to view information about the faculty staff. Thi
     + CRUDpersonal.js
     + index.js
 
-|[ :arrow_left: 2. Functional Requirements](Requirements.md)|[ 4. Implementation :arrow_right:](Implementation.md)|
+|[:arrow_left: 2. Functional Requirements](Requirements.md)|[4. Implementation :arrow_right:](Implementation.md)|
 |---|---|
