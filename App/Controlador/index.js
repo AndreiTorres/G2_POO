@@ -95,9 +95,9 @@ async function refresh(){   //EVENTOS-------------------------------------------
                         CRUDS
                         </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
+                                <li><a class="dropdown-item" href="Vista/CRUDevents.html">EVENTOS</a></li>
                                 <li class="divider"></li>
-                                <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                                <li><a class="dropdown-item" href="Vista/CRUDpersonal.html">PERSONAL</a></li>
                             </ul>
                         </div>
                     </th>
@@ -154,9 +154,9 @@ async function refreshPersonal(){   //PERSONAL --------------------------------
                                 CRUDS
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
+                                <li><a class="dropdown-item" href="Vista/CRUDevents.html">EVENTOS</a></li>
                                 <li class="divider"></li>
-                                <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                                <li><a class="dropdown-item" href="Vista/CRUDpersonal.html">PERSONAL</a></li>
                             </ul>
                         </div>
                     </th>
@@ -211,9 +211,9 @@ async function refreshEdificios(){   //EVENTOS----------------------------------
                     CRUDS
                     </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="paginas/CRUDevents.html">EVENTOS</a></li>
+                            <li><a class="dropdown-item" href="Vista/CRUDevents.html">EVENTOS</a></li>
                             <li class="divider"></li>
-                            <li><a class="dropdown-item" href="paginas/CRUDpersonal.html">PERSONAL</a></li>
+                            <li><a class="dropdown-item" href="Vista/CRUDpersonal.html">PERSONAL</a></li>
                         </ul>
                     </div>
                 </th>
