@@ -114,7 +114,7 @@ After discussing many ideas we have decided which tools to use, I began to inves
 
 ***Second report***: Research on the use of the Bootstrap framework and the Lefleat OpenStreetMap API.
 
-***Final report***:
+***Final report***: Changes were made from the start. The page managed to have the expected main functions.
 
 ---
 
