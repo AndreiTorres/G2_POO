@@ -35,7 +35,7 @@ In addition, each progress of each member is notified to the team's WhatsApp gro
 ### Metric
 The qualification of each member will be awarded according to the following metric.
 
-| Evaluation aspec  | Points  | 
+| Evaluation aspect  | Points  | 
 | ----------------- | ------- | 
 | Tasks             |    2    |   
 | Meetings          |    2    | 
