@@ -105,7 +105,7 @@ The qualification of each member will be awarded according to the following metr
 ***Second report***: 
 After discussing many ideas we have decided which tools to use, I began to investigate which database we can use while the tests will be done locally
 
-***Final report***: 
+***Final report***: Finally we were able to adapt various tools to our project, and we learned the advantages of using them.
 
 ---
 
