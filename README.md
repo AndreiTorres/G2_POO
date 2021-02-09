@@ -3,6 +3,8 @@
 
 [:space_invader: CHECK IT OUT](https://amaya7398.github.io/G2_POO/) (Admin Version)
 
+[Presentacion del proyecto](https://youtu.be/JAv69PDwIng)
+
 Team 2 Repository POO UADY 2020
 
 Profesor: Dr. Edgar Antonio Cambranes Martínez
